@@ -1,0 +1,3567 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_8681b8f607ade053fdba630f39c5c171 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+<div style="
+    position: fixed; 
+    bottom: 30px; 
+    left: 30px; 
+    z-index: 9999; 
+    background-color: white; 
+    padding: 10px 15px; 
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 14px;
+">
+<b>Кластеры</b><br>
+<div><span style="background:#ff4592; width:12px; height:12px; display:inline-block; margin-right:6px"></span>северный</div>
+<div><span style="background:#434dfa; width:12px; height:12px; display:inline-block; margin-right:6px"></span>южный</div>
+</div>
+    
+            <div class="folium-map" id="map_8681b8f607ade053fdba630f39c5c171" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_8681b8f607ade053fdba630f39c5c171 = L.map(
+                "map_8681b8f607ade053fdba630f39c5c171",
+                {
+                    center: [43.25, 76.9],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 11,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_0b9424e726eaac4dd5f70d135008b319 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_0b9424e726eaac4dd5f70d135008b319.addTo(map_8681b8f607ade053fdba630f39c5c171);
+        
+    
+            var circle_marker_6f8c43202c245e28a38e8de22ea7673c = L.circleMarker(
+                [43.262987, 76.8193],
+                {"bubblingMouseEvents": true, "color": "#ff4592", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ff4592", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_8681b8f607ade053fdba630f39c5c171);
+        
+    
+        var popup_f8a217835a3167295e7ceaf01e5f1a4a = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_658cb66136a416859bbedf3d71447148 = $(`<div id="html_658cb66136a416859bbedf3d71447148" style="width: 100.0%; height: 100.0%;">Almaty Arena<br>Кластер: северный кластер<br>Avg PM2.5: 38.91 µg/m³</div>`)[0];
+                popup_f8a217835a3167295e7ceaf01e5f1a4a.setContent(html_658cb66136a416859bbedf3d71447148);
+            
+        
+
+        circle_marker_6f8c43202c245e28a38e8de22ea7673c.bindPopup(popup_f8a217835a3167295e7ceaf01e5f1a4a)
+        ;
+
+        
+    
+    
+            var circle_marker_b9327fd5ad472c266c84d0e6829286f3 = L.circleMarker(
+                [43.384134, 76.98285],
+                {"bubblingMouseEvents": true, "color": "#ff4592", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ff4592", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_8681b8f607ade053fdba630f39c5c171);
+        
+    
+        var popup_4090d348b8ade40c26050a7c0d79fab1 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_b43dec2ba67ff75719bc75293d44aa59 = $(`<div id="html_b43dec2ba67ff75719bc75293d44aa59" style="width: 100.0%; height: 100.0%;">Клуб Стендовой стрельбы<br>Кластер: северный кластер<br>Avg PM2.5: 34.48 µg/m³</div>`)[0];
+                popup_4090d348b8ade40c26050a7c0d79fab1.setContent(html_b43dec2ba67ff75719bc75293d44aa59);
+            
+        
+
+        circle_marker_b9327fd5ad472c266c84d0e6829286f3.bindPopup(popup_4090d348b8ade40c26050a7c0d79fab1)
+        ;
+
+        
+    
+    
+            var circle_marker_2de7190fadb8de3db597df9cee2d8ca7 = L.circleMarker(
+                [43.235511, 76.911278],
+                {"bubblingMouseEvents": true, "color": "#434dfa", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#434dfa", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_8681b8f607ade053fdba630f39c5c171);
+        
+    
+        var popup_1490d2bbd5dc397e2b34c5560be41f55 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_19d211ebd0afcd17ea6014402e4b3f70 = $(`<div id="html_19d211ebd0afcd17ea6014402e4b3f70" style="width: 100.0%; height: 100.0%;">Центральная городская клиническая больница<br>Кластер: южный кластер<br>Avg PM2.5: 21.50 µg/m³</div>`)[0];
+                popup_1490d2bbd5dc397e2b34c5560be41f55.setContent(html_19d211ebd0afcd17ea6014402e4b3f70);
+            
+        
+
+        circle_marker_2de7190fadb8de3db597df9cee2d8ca7.bindPopup(popup_1490d2bbd5dc397e2b34c5560be41f55)
+        ;
+
+        
+    
+    
+            var circle_marker_91d958035eb3ed9dce137d4b27a1b9a6 = L.circleMarker(
+                [43.264, 76.9727],
+                {"bubblingMouseEvents": true, "color": "#434dfa", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#434dfa", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_8681b8f607ade053fdba630f39c5c171);
+        
+    
+        var popup_0deaffa28722107610cb56d0b1d04701 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_3f3d3af3a8dbeb2e8cffc8186dc07aa9 = $(`<div id="html_3f3d3af3a8dbeb2e8cffc8186dc07aa9" style="width: 100.0%; height: 100.0%;">ЦПКиО г. Алматы · улица Есенберлина, 173<br>Кластер: южный кластер<br>Avg PM2.5: 24.22 µg/m³</div>`)[0];
+                popup_0deaffa28722107610cb56d0b1d04701.setContent(html_3f3d3af3a8dbeb2e8cffc8186dc07aa9);
+            
+        
+
+        circle_marker_91d958035eb3ed9dce137d4b27a1b9a6.bindPopup(popup_0deaffa28722107610cb56d0b1d04701)
+        ;
+
+        
+    
+    
+            var circle_marker_2f58a3e4204b2e7a99ab992a5fb73158 = L.circleMarker(
+                [43.294105, 76.944017],
+                {"bubblingMouseEvents": true, "color": "#ff4592", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ff4592", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_8681b8f607ade053fdba630f39c5c171);
+        
+    
+        var popup_a5aa777f6b579ac354e8b9db49ef8fbd = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_5a1b5792319298c7c5f23660da7efdc4 = $(`<div id="html_5a1b5792319298c7c5f23660da7efdc4" style="width: 100.0%; height: 100.0%;">Роща Баума<br>Кластер: северный кластер<br>Avg PM2.5: 37.13 µg/m³</div>`)[0];
+                popup_a5aa777f6b579ac354e8b9db49ef8fbd.setContent(html_5a1b5792319298c7c5f23660da7efdc4);
+            
+        
+
+        circle_marker_2f58a3e4204b2e7a99ab992a5fb73158.bindPopup(popup_a5aa777f6b579ac354e8b9db49ef8fbd)
+        ;
+
+        
+    
+    
+            var circle_marker_c0832db0920f278de9db027703be5b5c = L.circleMarker(
+                [43.318046, 76.982758],
+                {"bubblingMouseEvents": true, "color": "#ff4592", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ff4592", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_8681b8f607ade053fdba630f39c5c171);
+        
+    
+        var popup_b7e361ed0bcada89b1f5c59dfd7811dc = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_b4d83e2314f423874a0addce5b0302e8 = $(`<div id="html_b4d83e2314f423874a0addce5b0302e8" style="width: 100.0%; height: 100.0%;">Жас канат ауданы (улица Б.Хмельницкий)<br>Кластер: северный кластер<br>Avg PM2.5: 40.07 µg/m³</div>`)[0];
+                popup_b7e361ed0bcada89b1f5c59dfd7811dc.setContent(html_b4d83e2314f423874a0addce5b0302e8);
+            
+        
+
+        circle_marker_c0832db0920f278de9db027703be5b5c.bindPopup(popup_b7e361ed0bcada89b1f5c59dfd7811dc)
+        ;
+
+        
+    
+    
+            var circle_marker_7b831a01e3c320db747c5084b706365b = L.circleMarker(
+                [43.350183, 76.988862],
+                {"bubblingMouseEvents": true, "color": "#ff4592", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ff4592", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_8681b8f607ade053fdba630f39c5c171);
+        
+    
+        var popup_fb2ccbc50698e0f16298ba8255079493 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_b82c7e269fefcb3ad8ff2537edfa04de = $(`<div id="html_b82c7e269fefcb3ad8ff2537edfa04de" style="width: 100.0%; height: 100.0%;">Микрорайон Алтай 2, 10<br>Кластер: северный кластер<br>Avg PM2.5: 41.05 µg/m³</div>`)[0];
+                popup_fb2ccbc50698e0f16298ba8255079493.setContent(html_b82c7e269fefcb3ad8ff2537edfa04de);
+            
+        
+
+        circle_marker_7b831a01e3c320db747c5084b706365b.bindPopup(popup_fb2ccbc50698e0f16298ba8255079493)
+        ;
+
+        
+    
+    
+            var circle_marker_994758f79c26d34bafc53bbabf8a4729 = L.circleMarker(
+                [43.2414, 76.9341],
+                {"bubblingMouseEvents": true, "color": "#434dfa", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#434dfa", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_8681b8f607ade053fdba630f39c5c171);
+        
+    
+        var popup_cc983dc0ff319f251d8d463498d0e5d5 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_900e63d1d79d8d386f57916a35bf1082 = $(`<div id="html_900e63d1d79d8d386f57916a35bf1082" style="width: 100.0%; height: 100.0%;">Абая - Сейфуллина<br>Кластер: южный кластер<br>Avg PM2.5: 24.97 µg/m³</div>`)[0];
+                popup_cc983dc0ff319f251d8d463498d0e5d5.setContent(html_900e63d1d79d8d386f57916a35bf1082);
+            
+        
+
+        circle_marker_994758f79c26d34bafc53bbabf8a4729.bindPopup(popup_cc983dc0ff319f251d8d463498d0e5d5)
+        ;
+
+        
+    
+    
+            var circle_marker_e12beb34a4908b909e04c1f89b519736 = L.circleMarker(
+                [43.310474, 76.874178],
+                {"bubblingMouseEvents": true, "color": "#ff4592", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ff4592", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_8681b8f607ade053fdba630f39c5c171);
+        
+    
+        var popup_81c87d0081fd40d614bb79d2671cf0f3 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_010414a0862ac1f5949df57efda25ef9 = $(`<div id="html_010414a0862ac1f5949df57efda25ef9" style="width: 100.0%; height: 100.0%;">Детский сад №168<br>Кластер: северный кластер<br>Avg PM2.5: 49.52 µg/m³</div>`)[0];
+                popup_81c87d0081fd40d614bb79d2671cf0f3.setContent(html_010414a0862ac1f5949df57efda25ef9);
+            
+        
+
+        circle_marker_e12beb34a4908b909e04c1f89b519736.bindPopup(popup_81c87d0081fd40d614bb79d2671cf0f3)
+        ;
+
+        
+    
+    
+            var circle_marker_73b9ed752febe808ffd0bfc93df3b2cf = L.circleMarker(
+                [43.358172, 76.979407],
+                {"bubblingMouseEvents": true, "color": "#ff4592", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ff4592", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_8681b8f607ade053fdba630f39c5c171);
+        
+    
+        var popup_05288bc8c0b9df5e62b4b21727c0611a = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_8fef4597cb703143b6b648aa926c0fec = $(`<div id="html_8fef4597cb703143b6b648aa926c0fec" style="width: 100.0%; height: 100.0%;">​Проспект Суюнбая, 487<br>Кластер: северный кластер<br>Avg PM2.5: 49.78 µg/m³</div>`)[0];
+                popup_05288bc8c0b9df5e62b4b21727c0611a.setContent(html_8fef4597cb703143b6b648aa926c0fec);
+            
+        
+
+        circle_marker_73b9ed752febe808ffd0bfc93df3b2cf.bindPopup(popup_05288bc8c0b9df5e62b4b21727c0611a)
+        ;
+
+        
+    
+    
+            var circle_marker_dac4d83d4f1f0f5288807c56a3ddf015 = L.circleMarker(
+                [43.311, 76.9015],
+                {"bubblingMouseEvents": true, "color": "#ff4592", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ff4592", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_8681b8f607ade053fdba630f39c5c171);
+        
+    
+        var popup_e5576e2070ef22a6d7c41513379e0ea8 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_b095484c209fc899f2d70cc1dd1e9874 = $(`<div id="html_b095484c209fc899f2d70cc1dd1e9874" style="width: 100.0%; height: 100.0%;">Детский сад №170<br>Кластер: северный кластер<br>Avg PM2.5: 40.89 µg/m³</div>`)[0];
+                popup_e5576e2070ef22a6d7c41513379e0ea8.setContent(html_b095484c209fc899f2d70cc1dd1e9874);
+            
+        
+
+        circle_marker_dac4d83d4f1f0f5288807c56a3ddf015.bindPopup(popup_e5576e2070ef22a6d7c41513379e0ea8)
+        ;
+
+        
+    
+    
+            var circle_marker_32f06ed5547824e91f7212867eded0bd = L.circleMarker(
+                [43.24182, 76.957279],
+                {"bubblingMouseEvents": true, "color": "#434dfa", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#434dfa", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_8681b8f607ade053fdba630f39c5c171);
+        
+    
+        var popup_d5b0d17905a286a4785259fda4c0cb78 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_916fbf6b3768fd94648236d5a143455a = $(`<div id="html_916fbf6b3768fd94648236d5a143455a" style="width: 100.0%; height: 100.0%;">Достык-Абая<br>Кластер: южный кластер<br>Avg PM2.5: 26.60 µg/m³</div>`)[0];
+                popup_d5b0d17905a286a4785259fda4c0cb78.setContent(html_916fbf6b3768fd94648236d5a143455a);
+            
+        
+
+        circle_marker_32f06ed5547824e91f7212867eded0bd.bindPopup(popup_d5b0d17905a286a4785259fda4c0cb78)
+        ;
+
+        
+    
+    
+            var circle_marker_301a17ab688742349510ec23ea5bb9a9 = L.circleMarker(
+                [43.263571, 76.83364],
+                {"bubblingMouseEvents": true, "color": "#ff4592", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ff4592", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_8681b8f607ade053fdba630f39c5c171);
+        
+    
+        var popup_b4f9b438656b3afd7d0a01782d48a8ef = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_8b374b20b1586b7c012f91b7fa8ada78 = $(`<div id="html_8b374b20b1586b7c012f91b7fa8ada78" style="width: 100.0%; height: 100.0%;">Улица Байконырова, 61<br>Кластер: северный кластер<br>Avg PM2.5: 48.03 µg/m³</div>`)[0];
+                popup_b4f9b438656b3afd7d0a01782d48a8ef.setContent(html_8b374b20b1586b7c012f91b7fa8ada78);
+            
+        
+
+        circle_marker_301a17ab688742349510ec23ea5bb9a9.bindPopup(popup_b4f9b438656b3afd7d0a01782d48a8ef)
+        ;
+
+        
+    
+    
+            var circle_marker_298fd1ff36e833850cdd9ccdba05de4a = L.circleMarker(
+                [43.290801, 76.850755],
+                {"bubblingMouseEvents": true, "color": "#ff4592", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ff4592", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_8681b8f607ade053fdba630f39c5c171);
+        
+    
+        var popup_6bef7f184f8c0550bb4fd89112c62d98 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_9378e0d78a3a02de303d64b120dc51f7 = $(`<div id="html_9378e0d78a3a02de303d64b120dc51f7" style="width: 100.0%; height: 100.0%;">Улица Жанкожа батыра, 118<br>Кластер: северный кластер<br>Avg PM2.5: 62.62 µg/m³</div>`)[0];
+                popup_6bef7f184f8c0550bb4fd89112c62d98.setContent(html_9378e0d78a3a02de303d64b120dc51f7);
+            
+        
+
+        circle_marker_298fd1ff36e833850cdd9ccdba05de4a.bindPopup(popup_6bef7f184f8c0550bb4fd89112c62d98)
+        ;
+
+        
+    
+    
+            var circle_marker_cb9b36f0a529930f40cd43d476b78c01 = L.circleMarker(
+                [43.274192, 76.910735],
+                {"bubblingMouseEvents": true, "color": "#434dfa", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#434dfa", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_8681b8f607ade053fdba630f39c5c171);
+        
+    
+        var popup_605958c91e53b95a7789ccb32ea7a9f7 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_d17d5cb77f95eee7fa04419dd659f253 = $(`<div id="html_d17d5cb77f95eee7fa04419dd659f253" style="width: 100.0%; height: 100.0%;">Улица Бокейханова, 19а<br>Кластер: южный кластер<br>Avg PM2.5: 33.37 µg/m³</div>`)[0];
+                popup_605958c91e53b95a7789ccb32ea7a9f7.setContent(html_d17d5cb77f95eee7fa04419dd659f253);
+            
+        
+
+        circle_marker_cb9b36f0a529930f40cd43d476b78c01.bindPopup(popup_605958c91e53b95a7789ccb32ea7a9f7)
+        ;
+
+        
+    
+    
+            var circle_marker_9b8a31f7a0d52eaf272decefe0373e07 = L.circleMarker(
+                [43.31431, 77.021008],
+                {"bubblingMouseEvents": true, "color": "#434dfa", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#434dfa", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_8681b8f607ade053fdba630f39c5c171);
+        
+    
+        var popup_aa83ed0dd2e9c318f73f094b96996333 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_c59cafd85671de552f3b2faf91ee22c7 = $(`<div id="html_c59cafd85671de552f3b2faf91ee22c7" style="width: 100.0%; height: 100.0%;">ТЦ Aport Mall East<br>Кластер: южный кластер<br>Avg PM2.5: 34.14 µg/m³</div>`)[0];
+                popup_aa83ed0dd2e9c318f73f094b96996333.setContent(html_c59cafd85671de552f3b2faf91ee22c7);
+            
+        
+
+        circle_marker_9b8a31f7a0d52eaf272decefe0373e07.bindPopup(popup_aa83ed0dd2e9c318f73f094b96996333)
+        ;
+
+        
+    
+    
+            var circle_marker_3973d55b617f1c4753acd3adb8eae102 = L.circleMarker(
+                [43.223787, 76.829194],
+                {"bubblingMouseEvents": true, "color": "#434dfa", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#434dfa", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_8681b8f607ade053fdba630f39c5c171);
+        
+    
+        var popup_9cb6f2475f5160f814183c67522275a4 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_435a8ebcaaac968ef168771bdc5d1ff0 = $(`<div id="html_435a8ebcaaac968ef168771bdc5d1ff0" style="width: 100.0%; height: 100.0%;">Мечеть в мкр. Достык<br>Кластер: южный кластер<br>Avg PM2.5: 39.19 µg/m³</div>`)[0];
+                popup_9cb6f2475f5160f814183c67522275a4.setContent(html_435a8ebcaaac968ef168771bdc5d1ff0);
+            
+        
+
+        circle_marker_3973d55b617f1c4753acd3adb8eae102.bindPopup(popup_9cb6f2475f5160f814183c67522275a4)
+        ;
+
+        
+    
+    
+            var circle_marker_ece8a8fd80966ab006d835bdb596e0b8 = L.circleMarker(
+                [43.245208, 76.907457],
+                {"bubblingMouseEvents": true, "color": "#434dfa", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#434dfa", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_8681b8f607ade053fdba630f39c5c171);
+        
+    
+        var popup_6a6b0d09c1a241c3cf01c326b30c9f09 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_d6781d43af12f10c2436cbfe6ca96ee7 = $(`<div id="html_d6781d43af12f10c2436cbfe6ca96ee7" style="width: 100.0%; height: 100.0%;">Жамбыла - Нурмакова<br>Кластер: южный кластер<br>Avg PM2.5: 22.83 µg/m³</div>`)[0];
+                popup_6a6b0d09c1a241c3cf01c326b30c9f09.setContent(html_d6781d43af12f10c2436cbfe6ca96ee7);
+            
+        
+
+        circle_marker_ece8a8fd80966ab006d835bdb596e0b8.bindPopup(popup_6a6b0d09c1a241c3cf01c326b30c9f09)
+        ;
+
+        
+    
+    
+            var circle_marker_51a495d8e3c341fba803a071f5634668 = L.circleMarker(
+                [43.237457, 76.833881],
+                {"bubblingMouseEvents": true, "color": "#434dfa", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#434dfa", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_8681b8f607ade053fdba630f39c5c171);
+        
+    
+        var popup_53e93a6d65effa2697b4e2032c87e342 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_1fcb1b2bbf91baac481cb72c932e90ad = $(`<div id="html_1fcb1b2bbf91baac481cb72c932e90ad" style="width: 100.0%; height: 100.0%;">Школа №42<br>Кластер: южный кластер<br>Avg PM2.5: 31.68 µg/m³</div>`)[0];
+                popup_53e93a6d65effa2697b4e2032c87e342.setContent(html_1fcb1b2bbf91baac481cb72c932e90ad);
+            
+        
+
+        circle_marker_51a495d8e3c341fba803a071f5634668.bindPopup(popup_53e93a6d65effa2697b4e2032c87e342)
+        ;
+
+        
+    
+    
+            var circle_marker_756c9059619cc29174f1ae102a588b6f = L.circleMarker(
+                [43.198404, 76.82976],
+                {"bubblingMouseEvents": true, "color": "#434dfa", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#434dfa", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_8681b8f607ade053fdba630f39c5c171);
+        
+    
+        var popup_a41d140ddc59408bd317f0fbd126058d = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_13afd18c2d667a22812c9bd30be5905a = $(`<div id="html_13afd18c2d667a22812c9bd30be5905a" style="width: 100.0%; height: 100.0%;">Улица Буланды, 2<br>Кластер: южный кластер<br>Avg PM2.5: 27.07 µg/m³</div>`)[0];
+                popup_a41d140ddc59408bd317f0fbd126058d.setContent(html_13afd18c2d667a22812c9bd30be5905a);
+            
+        
+
+        circle_marker_756c9059619cc29174f1ae102a588b6f.bindPopup(popup_a41d140ddc59408bd317f0fbd126058d)
+        ;
+
+        
+    
+    
+            var circle_marker_94f322efa9398741a2954165b340d382 = L.circleMarker(
+                [43.1729, 76.815],
+                {"bubblingMouseEvents": true, "color": "#434dfa", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#434dfa", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_8681b8f607ade053fdba630f39c5c171);
+        
+    
+        var popup_e431ee94ff455aefa2151c8a2e2805b6 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_ba9ee7d1e07df8a17cbbdab715344f47 = $(`<div id="html_ba9ee7d1e07df8a17cbbdab715344f47" style="width: 100.0%; height: 100.0%;">Территория ПКСТ Казгипрозем, 21<br>Кластер: южный кластер<br>Avg PM2.5: 18.78 µg/m³</div>`)[0];
+                popup_e431ee94ff455aefa2151c8a2e2805b6.setContent(html_ba9ee7d1e07df8a17cbbdab715344f47);
+            
+        
+
+        circle_marker_94f322efa9398741a2954165b340d382.bindPopup(popup_e431ee94ff455aefa2151c8a2e2805b6)
+        ;
+
+        
+    
+    
+            var circle_marker_5ef5fc4983aff6564d88898fe0c3fc28 = L.circleMarker(
+                [43.172916, 76.831495],
+                {"bubblingMouseEvents": true, "color": "#434dfa", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#434dfa", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_8681b8f607ade053fdba630f39c5c171);
+        
+    
+        var popup_ece90dd92c0280faa9c1ab7f919e4794 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_525c3c074b17335bc505602439a54752 = $(`<div id="html_525c3c074b17335bc505602439a54752" style="width: 100.0%; height: 100.0%;">Улица Центральная, 20<br>Кластер: южный кластер<br>Avg PM2.5: 20.29 µg/m³</div>`)[0];
+                popup_ece90dd92c0280faa9c1ab7f919e4794.setContent(html_525c3c074b17335bc505602439a54752);
+            
+        
+
+        circle_marker_5ef5fc4983aff6564d88898fe0c3fc28.bindPopup(popup_ece90dd92c0280faa9c1ab7f919e4794)
+        ;
+
+        
+    
+    
+            var circle_marker_6c00032dff9820b415e6b02f02891307 = L.circleMarker(
+                [43.473873, 76.969312],
+                {"bubblingMouseEvents": true, "color": "#ff4592", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ff4592", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_8681b8f607ade053fdba630f39c5c171);
+        
+    
+        var popup_55e1d626842dedab277d610d6250c4d5 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_63e26790081ce1234402a65c3d56b9fa = $(`<div id="html_63e26790081ce1234402a65c3d56b9fa" style="width: 100.0%; height: 100.0%;">Средняя школа №52 Жанаталап<br>Кластер: северный кластер<br>Avg PM2.5: 63.19 µg/m³</div>`)[0];
+                popup_55e1d626842dedab277d610d6250c4d5.setContent(html_63e26790081ce1234402a65c3d56b9fa);
+            
+        
+
+        circle_marker_6c00032dff9820b415e6b02f02891307.bindPopup(popup_55e1d626842dedab277d610d6250c4d5)
+        ;
+
+        
+    
+    
+            var circle_marker_a563183356e1ce6380d30e49787766e7 = L.circleMarker(
+                [43.351554, 77.057347],
+                {"bubblingMouseEvents": true, "color": "#ff4592", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ff4592", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_8681b8f607ade053fdba630f39c5c171);
+        
+    
+        var popup_20fdaf5e2fe5f9e5a327ff63f032ae9c = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_d5256905cd8cb5b334d61ef9b3a29019 = $(`<div id="html_d5256905cd8cb5b334d61ef9b3a29019" style="width: 100.0%; height: 100.0%;">Школа №21 Гулдала<br>Кластер: северный кластер<br>Avg PM2.5: 50.21 µg/m³</div>`)[0];
+                popup_20fdaf5e2fe5f9e5a327ff63f032ae9c.setContent(html_d5256905cd8cb5b334d61ef9b3a29019);
+            
+        
+
+        circle_marker_a563183356e1ce6380d30e49787766e7.bindPopup(popup_20fdaf5e2fe5f9e5a327ff63f032ae9c)
+        ;
+
+        
+    
+    
+            var circle_marker_0d3f8922734469176c33c69b2066cf70 = L.circleMarker(
+                [43.2735, 76.8904],
+                {"bubblingMouseEvents": true, "color": "#ff4592", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ff4592", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_8681b8f607ade053fdba630f39c5c171);
+        
+    
+        var popup_e060006a9cdf9419836197033e3d37d8 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_bc3f0aa2267e263f26b55f65114b7656 = $(`<div id="html_bc3f0aa2267e263f26b55f65114b7656" style="width: 100.0%; height: 100.0%;">Проспект Турара Рыскулова, 158/2<br>Кластер: северный кластер<br>Avg PM2.5: 38.20 µg/m³</div>`)[0];
+                popup_e060006a9cdf9419836197033e3d37d8.setContent(html_bc3f0aa2267e263f26b55f65114b7656);
+            
+        
+
+        circle_marker_0d3f8922734469176c33c69b2066cf70.bindPopup(popup_e060006a9cdf9419836197033e3d37d8)
+        ;
+
+        
+    
+    
+            var circle_marker_2e75d4ceedf03224c9019e40ff4e7599 = L.circleMarker(
+                [43.2298, 76.814],
+                {"bubblingMouseEvents": true, "color": "#434dfa", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#434dfa", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_8681b8f607ade053fdba630f39c5c171);
+        
+    
+        var popup_ae5387e5b49ef1efb59f663010ce74ae = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_b34560f90f4f06d9d0b33c191b6acae0 = $(`<div id="html_b34560f90f4f06d9d0b33c191b6acae0" style="width: 100.0%; height: 100.0%;">Улица Кулыбекова, 106<br>Кластер: южный кластер<br>Avg PM2.5: 36.63 µg/m³</div>`)[0];
+                popup_ae5387e5b49ef1efb59f663010ce74ae.setContent(html_b34560f90f4f06d9d0b33c191b6acae0);
+            
+        
+
+        circle_marker_2e75d4ceedf03224c9019e40ff4e7599.bindPopup(popup_ae5387e5b49ef1efb59f663010ce74ae)
+        ;
+
+        
+    
+    
+            var circle_marker_b0a77e092c915a7174c9716ec392a796 = L.circleMarker(
+                [43.2198, 76.8021],
+                {"bubblingMouseEvents": true, "color": "#434dfa", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#434dfa", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_8681b8f607ade053fdba630f39c5c171);
+        
+    
+        var popup_ed8728fdfdacb94319cfc62074797400 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_74d9d851c35e72872d9c9facbfb241fd = $(`<div id="html_74d9d851c35e72872d9c9facbfb241fd" style="width: 100.0%; height: 100.0%;">Школа-гимназия №174<br>Кластер: южный кластер<br>Avg PM2.5: 27.62 µg/m³</div>`)[0];
+                popup_ed8728fdfdacb94319cfc62074797400.setContent(html_74d9d851c35e72872d9c9facbfb241fd);
+            
+        
+
+        circle_marker_b0a77e092c915a7174c9716ec392a796.bindPopup(popup_ed8728fdfdacb94319cfc62074797400)
+        ;
+
+        
+    
+    
+            var circle_marker_8f89b9fa571a1d72b9d4b475fcc2b796 = L.circleMarker(
+                [43.27181, 76.844933],
+                {"bubblingMouseEvents": true, "color": "#ff4592", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ff4592", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_8681b8f607ade053fdba630f39c5c171);
+        
+    
+        var popup_de226404091732a419183cabcbb64dd2 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_27d34da88dde25afa6e0858186ad6c19 = $(`<div id="html_27d34da88dde25afa6e0858186ad6c19" style="width: 100.0%; height: 100.0%;">Школа №171<br>Кластер: северный кластер<br>Avg PM2.5: 53.83 µg/m³</div>`)[0];
+                popup_de226404091732a419183cabcbb64dd2.setContent(html_27d34da88dde25afa6e0858186ad6c19);
+            
+        
+
+        circle_marker_8f89b9fa571a1d72b9d4b475fcc2b796.bindPopup(popup_de226404091732a419183cabcbb64dd2)
+        ;
+
+        
+    
+    
+            var circle_marker_f7edec671347799d1b107e9d02d3fb6e = L.circleMarker(
+                [43.30818, 76.881712],
+                {"bubblingMouseEvents": true, "color": "#ff4592", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ff4592", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_8681b8f607ade053fdba630f39c5c171);
+        
+    
+        var popup_05c55e2db506081f7a9509b1c7308027 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_05d94bde1b7c2f8e0dd869eac3bc7e95 = $(`<div id="html_05d94bde1b7c2f8e0dd869eac3bc7e95" style="width: 100.0%; height: 100.0%;">Ер Жанибек мечеть<br>Кластер: северный кластер<br>Avg PM2.5: 49.63 µg/m³</div>`)[0];
+                popup_05c55e2db506081f7a9509b1c7308027.setContent(html_05d94bde1b7c2f8e0dd869eac3bc7e95);
+            
+        
+
+        circle_marker_f7edec671347799d1b107e9d02d3fb6e.bindPopup(popup_05c55e2db506081f7a9509b1c7308027)
+        ;
+
+        
+    
+    
+            var circle_marker_bd2bb37bfd25af675d8ab701c4eebe03 = L.circleMarker(
+                [43.37397, 76.626571],
+                {"bubblingMouseEvents": true, "color": "#ff4592", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ff4592", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_8681b8f607ade053fdba630f39c5c171);
+        
+    
+        var popup_ccea42bd5eba99f26f36f191179b9326 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_fbc0edde309f21c7adea33e82c135a59 = $(`<div id="html_fbc0edde309f21c7adea33e82c135a59" style="width: 100.0%; height: 100.0%;">Школа им. Тлеубаева Шамалган<br>Кластер: северный кластер<br>Avg PM2.5: 42.55 µg/m³</div>`)[0];
+                popup_ccea42bd5eba99f26f36f191179b9326.setContent(html_fbc0edde309f21c7adea33e82c135a59);
+            
+        
+
+        circle_marker_bd2bb37bfd25af675d8ab701c4eebe03.bindPopup(popup_ccea42bd5eba99f26f36f191179b9326)
+        ;
+
+        
+    
+    
+            var circle_marker_a541f657a8cd178d56f376a8da39a43e = L.circleMarker(
+                [43.2537, 76.906028],
+                {"bubblingMouseEvents": true, "color": "#434dfa", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#434dfa", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_8681b8f607ade053fdba630f39c5c171);
+        
+    
+        var popup_655aea5d6b6921866cd46202e8573806 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_725a59b70db83b6316248eaade53b419 = $(`<div id="html_725a59b70db83b6316248eaade53b419" style="width: 100.0%; height: 100.0%;">Улица Нурмакова, 56 · улица Казыбек би, 174<br>Кластер: южный кластер<br>Avg PM2.5: 25.92 µg/m³</div>`)[0];
+                popup_655aea5d6b6921866cd46202e8573806.setContent(html_725a59b70db83b6316248eaade53b419);
+            
+        
+
+        circle_marker_a541f657a8cd178d56f376a8da39a43e.bindPopup(popup_655aea5d6b6921866cd46202e8573806)
+        ;
+
+        
+    
+    
+            var circle_marker_6085d86a0f86225e54d8b996cb45233c = L.circleMarker(
+                [43.26298, 76.931874],
+                {"bubblingMouseEvents": true, "color": "#434dfa", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#434dfa", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_8681b8f607ade053fdba630f39c5c171);
+        
+    
+        var popup_a48dd8d5342e5b5d14a092565c89d268 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_825ab2c54b316c4ed9ffde9465c71816 = $(`<div id="html_825ab2c54b316c4ed9ffde9465c71816" style="width: 100.0%; height: 100.0%;">Проспект Сейфуллина, 420<br>Кластер: южный кластер<br>Avg PM2.5: 27.67 µg/m³</div>`)[0];
+                popup_a48dd8d5342e5b5d14a092565c89d268.setContent(html_825ab2c54b316c4ed9ffde9465c71816);
+            
+        
+
+        circle_marker_6085d86a0f86225e54d8b996cb45233c.bindPopup(popup_a48dd8d5342e5b5d14a092565c89d268)
+        ;
+
+        
+    
+    
+            var circle_marker_a087f308ffa87636967c3e91defcf531 = L.circleMarker(
+                [43.3216, 76.9538],
+                {"bubblingMouseEvents": true, "color": "#ff4592", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ff4592", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_8681b8f607ade053fdba630f39c5c171);
+        
+    
+        var popup_fba86f06978c9eea3fcbb5c264a32899 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_12604bb33b8f681145464a0b538493c9 = $(`<div id="html_12604bb33b8f681145464a0b538493c9" style="width: 100.0%; height: 100.0%;">Улица Буденного, 16<br>Кластер: северный кластер<br>Avg PM2.5: 43.99 µg/m³</div>`)[0];
+                popup_fba86f06978c9eea3fcbb5c264a32899.setContent(html_12604bb33b8f681145464a0b538493c9);
+            
+        
+
+        circle_marker_a087f308ffa87636967c3e91defcf531.bindPopup(popup_fba86f06978c9eea3fcbb5c264a32899)
+        ;
+
+        
+    
+    
+            var circle_marker_ecaf63c10378cf84ae8b2d417df0962f = L.circleMarker(
+                [43.41335, 76.913973],
+                {"bubblingMouseEvents": true, "color": "#ff4592", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ff4592", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_8681b8f607ade053fdba630f39c5c171);
+        
+    
+        var popup_16ce2d28c242cc62f2389257fe1349d4 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_ad9be11edc09b63007fd85ad1bd35912 = $(`<div id="html_ad9be11edc09b63007fd85ad1bd35912" style="width: 100.0%; height: 100.0%;">Школа №19 с. Мухаметжан Туймебаев<br>Кластер: северный кластер<br>Avg PM2.5: 56.43 µg/m³</div>`)[0];
+                popup_16ce2d28c242cc62f2389257fe1349d4.setContent(html_ad9be11edc09b63007fd85ad1bd35912);
+            
+        
+
+        circle_marker_ecaf63c10378cf84ae8b2d417df0962f.bindPopup(popup_16ce2d28c242cc62f2389257fe1349d4)
+        ;
+
+        
+    
+    
+            var circle_marker_977eee88cd8f68a97eef58e141ccd0d8 = L.circleMarker(
+                [43.200984, 76.913641],
+                {"bubblingMouseEvents": true, "color": "#434dfa", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#434dfa", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_8681b8f607ade053fdba630f39c5c171);
+        
+    
+        var popup_95b77d489b9c4d4c51e7e099d7a3d144 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_057caa547f785d0f153d95e0fc6eadc5 = $(`<div id="html_057caa547f785d0f153d95e0fc6eadc5" style="width: 100.0%; height: 100.0%;">Алматинский областной детский дом №1<br>Кластер: южный кластер<br>Avg PM2.5: 20.21 µg/m³</div>`)[0];
+                popup_95b77d489b9c4d4c51e7e099d7a3d144.setContent(html_057caa547f785d0f153d95e0fc6eadc5);
+            
+        
+
+        circle_marker_977eee88cd8f68a97eef58e141ccd0d8.bindPopup(popup_95b77d489b9c4d4c51e7e099d7a3d144)
+        ;
+
+        
+    
+    
+            var circle_marker_8e5d870644328f013e5cee41b0ae8c84 = L.circleMarker(
+                [43.3732, 76.9431],
+                {"bubblingMouseEvents": true, "color": "#ff4592", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ff4592", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_8681b8f607ade053fdba630f39c5c171);
+        
+    
+        var popup_fcb008513172d1ae830f304feb39113f = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_b577cebdbfd910e3d99695b03a0f01e2 = $(`<div id="html_b577cebdbfd910e3d99695b03a0f01e2" style="width: 100.0%; height: 100.0%;">Школа №193<br>Кластер: северный кластер<br>Avg PM2.5: 30.04 µg/m³</div>`)[0];
+                popup_fcb008513172d1ae830f304feb39113f.setContent(html_b577cebdbfd910e3d99695b03a0f01e2);
+            
+        
+
+        circle_marker_8e5d870644328f013e5cee41b0ae8c84.bindPopup(popup_fcb008513172d1ae830f304feb39113f)
+        ;
+
+        
+    
+    
+            var circle_marker_469d42b78b2a376fd21a80733fca77f5 = L.circleMarker(
+                [43.235838, 76.951819],
+                {"bubblingMouseEvents": true, "color": "#434dfa", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#434dfa", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_8681b8f607ade053fdba630f39c5c171);
+        
+    
+        var popup_68b7211f0e6ef3f18285b13c7d4bd7bf = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_773b8fad3329415e6a6d714c8794cd22 = $(`<div id="html_773b8fad3329415e6a6d714c8794cd22" style="width: 100.0%; height: 100.0%;">Samal-1       <br>Кластер: южный кластер<br>Avg PM2.5: 27.69 µg/m³</div>`)[0];
+                popup_68b7211f0e6ef3f18285b13c7d4bd7bf.setContent(html_773b8fad3329415e6a6d714c8794cd22);
+            
+        
+
+        circle_marker_469d42b78b2a376fd21a80733fca77f5.bindPopup(popup_68b7211f0e6ef3f18285b13c7d4bd7bf)
+        ;
+
+        
+    
+    
+            var circle_marker_362dda0befde9aa6f2cc1e9d40e6a5c1 = L.circleMarker(
+                [43.167961, 76.916275],
+                {"bubblingMouseEvents": true, "color": "#434dfa", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#434dfa", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_8681b8f607ade053fdba630f39c5c171);
+        
+    
+        var popup_6ea45f7b9cacd44012ce81572a07baa5 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_f225eddc8f4182216c40076f89047bba = $(`<div id="html_f225eddc8f4182216c40076f89047bba" style="width: 100.0%; height: 100.0%;">ул. К. Салыкова - Центральная<br>Кластер: южный кластер<br>Avg PM2.5: 18.41 µg/m³</div>`)[0];
+                popup_6ea45f7b9cacd44012ce81572a07baa5.setContent(html_f225eddc8f4182216c40076f89047bba);
+            
+        
+
+        circle_marker_362dda0befde9aa6f2cc1e9d40e6a5c1.bindPopup(popup_6ea45f7b9cacd44012ce81572a07baa5)
+        ;
+
+        
+    
+    
+            var circle_marker_db97ac5e029315701af3ac8250858561 = L.circleMarker(
+                [43.188479, 76.930409],
+                {"bubblingMouseEvents": true, "color": "#434dfa", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#434dfa", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_8681b8f607ade053fdba630f39c5c171);
+        
+    
+        var popup_02a7e10e2245cf9e0412f11dd9c8e6f8 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_2168e3ac898becb00672de53c783a856 = $(`<div id="html_2168e3ac898becb00672de53c783a856" style="width: 100.0%; height: 100.0%;">Ерменсай<br>Кластер: южный кластер<br>Avg PM2.5: 19.65 µg/m³</div>`)[0];
+                popup_02a7e10e2245cf9e0412f11dd9c8e6f8.setContent(html_2168e3ac898becb00672de53c783a856);
+            
+        
+
+        circle_marker_db97ac5e029315701af3ac8250858561.bindPopup(popup_02a7e10e2245cf9e0412f11dd9c8e6f8)
+        ;
+
+        
+    
+    
+            var circle_marker_f25211e5f838d15b5a7ce1df03cc4c3b = L.circleMarker(
+                [43.323927, 77.06439],
+                {"bubblingMouseEvents": true, "color": "#ff4592", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ff4592", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_8681b8f607ade053fdba630f39c5c171);
+        
+    
+        var popup_f178f7db9f6be0c96431e323c1018b0b = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_020cb6f058d9a3d8cd15ae606359f089 = $(`<div id="html_020cb6f058d9a3d8cd15ae606359f089" style="width: 100.0%; height: 100.0%;">Школа №13 Туздыбастау<br>Кластер: северный кластер<br>Avg PM2.5: 38.58 µg/m³</div>`)[0];
+                popup_f178f7db9f6be0c96431e323c1018b0b.setContent(html_020cb6f058d9a3d8cd15ae606359f089);
+            
+        
+
+        circle_marker_f25211e5f838d15b5a7ce1df03cc4c3b.bindPopup(popup_f178f7db9f6be0c96431e323c1018b0b)
+        ;
+
+        
+    
+    
+            var circle_marker_5753b5f8275fae3d9a05d4d8f0f8cf9d = L.circleMarker(
+                [43.311843, 76.955744],
+                {"bubblingMouseEvents": true, "color": "#ff4592", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ff4592", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_8681b8f607ade053fdba630f39c5c171);
+        
+    
+        var popup_8dfb68ae3944217f1adae3607ad316c5 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_4b8eacf53642302a43433c8ea6780a21 = $(`<div id="html_4b8eacf53642302a43433c8ea6780a21" style="width: 100.0%; height: 100.0%;">Школа №162<br>Кластер: северный кластер<br>Avg PM2.5: 37.30 µg/m³</div>`)[0];
+                popup_8dfb68ae3944217f1adae3607ad316c5.setContent(html_4b8eacf53642302a43433c8ea6780a21);
+            
+        
+
+        circle_marker_5753b5f8275fae3d9a05d4d8f0f8cf9d.bindPopup(popup_8dfb68ae3944217f1adae3607ad316c5)
+        ;
+
+        
+    
+    
+            var circle_marker_59f3d1dc5ddf6f7e8b9eb77ff42d63b3 = L.circleMarker(
+                [43.302668, 77.183563],
+                {"bubblingMouseEvents": true, "color": "#434dfa", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#434dfa", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_8681b8f607ade053fdba630f39c5c171);
+        
+    
+        var popup_cb0dac1382039092060349aef038ca9a = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_f9ae4e6939137656048cd47eaa7b26b1 = $(`<div id="html_f9ae4e6939137656048cd47eaa7b26b1" style="width: 100.0%; height: 100.0%;">Школа гимназия №19 Кызылкайрат<br>Кластер: южный кластер<br>Avg PM2.5: 30.36 µg/m³</div>`)[0];
+                popup_cb0dac1382039092060349aef038ca9a.setContent(html_f9ae4e6939137656048cd47eaa7b26b1);
+            
+        
+
+        circle_marker_59f3d1dc5ddf6f7e8b9eb77ff42d63b3.bindPopup(popup_cb0dac1382039092060349aef038ca9a)
+        ;
+
+        
+    
+    
+            var circle_marker_167b4b5aaa67730277cb371058bdd7a5 = L.circleMarker(
+                [43.201536, 76.762699],
+                {"bubblingMouseEvents": true, "color": "#434dfa", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#434dfa", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_8681b8f607ade053fdba630f39c5c171);
+        
+    
+        var popup_c99b490fc16dd1a2e8b425fe8ec68c9a = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_73e185413dafb26b7a942582ec1701d4 = $(`<div id="html_73e185413dafb26b7a942582ec1701d4" style="width: 100.0%; height: 100.0%;">Школа №2 села Абай<br>Кластер: южный кластер<br>Avg PM2.5: 31.11 µg/m³</div>`)[0];
+                popup_c99b490fc16dd1a2e8b425fe8ec68c9a.setContent(html_73e185413dafb26b7a942582ec1701d4);
+            
+        
+
+        circle_marker_167b4b5aaa67730277cb371058bdd7a5.bindPopup(popup_c99b490fc16dd1a2e8b425fe8ec68c9a)
+        ;
+
+        
+    
+    
+            var circle_marker_9d53ba5d74cb11821a3b9a6cc71738d2 = L.circleMarker(
+                [43.203541, 76.886873],
+                {"bubblingMouseEvents": true, "color": "#434dfa", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#434dfa", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_8681b8f607ade053fdba630f39c5c171);
+        
+    
+        var popup_5660ad27b8f09f42bedb3af20a718a29 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_f3442bdc4074d0f481168b805d7173a9 = $(`<div id="html_f3442bdc4074d0f481168b805d7173a9" style="width: 100.0%; height: 100.0%;">Улица Навои, 302<br>Кластер: южный кластер<br>Avg PM2.5: 20.29 µg/m³</div>`)[0];
+                popup_5660ad27b8f09f42bedb3af20a718a29.setContent(html_f3442bdc4074d0f481168b805d7173a9);
+            
+        
+
+        circle_marker_9d53ba5d74cb11821a3b9a6cc71738d2.bindPopup(popup_5660ad27b8f09f42bedb3af20a718a29)
+        ;
+
+        
+    
+    
+            var circle_marker_aec2a7bc06aa68ba92ebb3c32caecfcb = L.circleMarker(
+                [43.285113, 76.947981],
+                {"bubblingMouseEvents": true, "color": "#ff4592", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ff4592", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_8681b8f607ade053fdba630f39c5c171);
+        
+    
+        var popup_557536d1a77785eb53e79efa4c2bedd4 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_9b3d8f90b0fc05535828f04c6f494404 = $(`<div id="html_9b3d8f90b0fc05535828f04c6f494404" style="width: 100.0%; height: 100.0%;">Проспект Суюнбая, 121<br>Кластер: северный кластер<br>Avg PM2.5: 37.84 µg/m³</div>`)[0];
+                popup_557536d1a77785eb53e79efa4c2bedd4.setContent(html_9b3d8f90b0fc05535828f04c6f494404);
+            
+        
+
+        circle_marker_aec2a7bc06aa68ba92ebb3c32caecfcb.bindPopup(popup_557536d1a77785eb53e79efa4c2bedd4)
+        ;
+
+        
+    
+    
+            var circle_marker_c731331efe2ba3b2631555f81d69e5f2 = L.circleMarker(
+                [43.280897, 76.823763],
+                {"bubblingMouseEvents": true, "color": "#ff4592", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ff4592", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_8681b8f607ade053fdba630f39c5c171);
+        
+    
+        var popup_7a6b1394a9543b0e974a882339ef9b59 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_53d9a1215e5a4d6ef547c02f6891b1a5 = $(`<div id="html_53d9a1215e5a4d6ef547c02f6891b1a5" style="width: 100.0%; height: 100.0%;">Школа-гимназия №182<br>Кластер: северный кластер<br>Avg PM2.5: 34.95 µg/m³</div>`)[0];
+                popup_7a6b1394a9543b0e974a882339ef9b59.setContent(html_53d9a1215e5a4d6ef547c02f6891b1a5);
+            
+        
+
+        circle_marker_c731331efe2ba3b2631555f81d69e5f2.bindPopup(popup_7a6b1394a9543b0e974a882339ef9b59)
+        ;
+
+        
+    
+    
+            var circle_marker_019220a8b61b1c99842e9cea520ba159 = L.circleMarker(
+                [43.220048, 76.815503],
+                {"bubblingMouseEvents": true, "color": "#434dfa", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#434dfa", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_8681b8f607ade053fdba630f39c5c171);
+        
+    
+        var popup_5575015555bb6e218069b5f1b9cec671 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_60826597dd4f6f1503fb3dc88f382ba5 = $(`<div id="html_60826597dd4f6f1503fb3dc88f382ba5" style="width: 100.0%; height: 100.0%;">Калкаманская мечеть<br>Кластер: южный кластер<br>Avg PM2.5: 21.98 µg/m³</div>`)[0];
+                popup_5575015555bb6e218069b5f1b9cec671.setContent(html_60826597dd4f6f1503fb3dc88f382ba5);
+            
+        
+
+        circle_marker_019220a8b61b1c99842e9cea520ba159.bindPopup(popup_5575015555bb6e218069b5f1b9cec671)
+        ;
+
+        
+    
+    
+            var circle_marker_7ccef116821dac88af205f8ef117c71e = L.circleMarker(
+                [43.375693, 77.00559],
+                {"bubblingMouseEvents": true, "color": "#ff4592", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ff4592", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_8681b8f607ade053fdba630f39c5c171);
+        
+    
+        var popup_a0788c0a6bfdf07b01b54dc1bc60e8a6 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_9e0c66f587d004a6b3e1f93f2a874fe9 = $(`<div id="html_9e0c66f587d004a6b3e1f93f2a874fe9" style="width: 100.0%; height: 100.0%;">Улица Шортанбай жырау, 9/1<br>Кластер: северный кластер<br>Avg PM2.5: 51.97 µg/m³</div>`)[0];
+                popup_a0788c0a6bfdf07b01b54dc1bc60e8a6.setContent(html_9e0c66f587d004a6b3e1f93f2a874fe9);
+            
+        
+
+        circle_marker_7ccef116821dac88af205f8ef117c71e.bindPopup(popup_a0788c0a6bfdf07b01b54dc1bc60e8a6)
+        ;
+
+        
+    
+    
+            var circle_marker_bd01795c2b4f21f6bab9701246ae86b2 = L.circleMarker(
+                [43.2362, 76.9652],
+                {"bubblingMouseEvents": true, "color": "#434dfa", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#434dfa", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_8681b8f607ade053fdba630f39c5c171);
+        
+    
+        var popup_2c3a832986700f9057b6accf62675f5a = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_3ec796b9349210625bb46bdceed26d7f = $(`<div id="html_3ec796b9349210625bb46bdceed26d7f" style="width: 100.0%; height: 100.0%;">Горный переулок, 13 · улица Керей-Жанибек хандар, 24<br>Кластер: южный кластер<br>Avg PM2.5: 20.87 µg/m³</div>`)[0];
+                popup_2c3a832986700f9057b6accf62675f5a.setContent(html_3ec796b9349210625bb46bdceed26d7f);
+            
+        
+
+        circle_marker_bd01795c2b4f21f6bab9701246ae86b2.bindPopup(popup_2c3a832986700f9057b6accf62675f5a)
+        ;
+
+        
+    
+    
+            var circle_marker_0bb4e2c5d88a0a3f2a1aab0290dfa915 = L.circleMarker(
+                [43.3615, 76.9653],
+                {"bubblingMouseEvents": true, "color": "#ff4592", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ff4592", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_8681b8f607ade053fdba630f39c5c171);
+        
+    
+        var popup_dc6068f0afd56d554bc9e7119d03954c = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_d332d864b63f0140260fe53c9567c447 = $(`<div id="html_d332d864b63f0140260fe53c9567c447" style="width: 100.0%; height: 100.0%;">Улица Радус-Зеньковича, 11<br>Кластер: северный кластер<br>Avg PM2.5: 53.66 µg/m³</div>`)[0];
+                popup_dc6068f0afd56d554bc9e7119d03954c.setContent(html_d332d864b63f0140260fe53c9567c447);
+            
+        
+
+        circle_marker_0bb4e2c5d88a0a3f2a1aab0290dfa915.bindPopup(popup_dc6068f0afd56d554bc9e7119d03954c)
+        ;
+
+        
+    
+    
+            var circle_marker_beeaca36cd7d3560321a3489b2261f90 = L.circleMarker(
+                [43.2083, 76.9665],
+                {"bubblingMouseEvents": true, "color": "#434dfa", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#434dfa", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_8681b8f607ade053fdba630f39c5c171);
+        
+    
+        var popup_9ede39338ef9f38e00683a3f26286f1a = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_bf2144ab227f6acb1188a578b13d134d = $(`<div id="html_bf2144ab227f6acb1188a578b13d134d" style="width: 100.0%; height: 100.0%;">Проспект Достык, 291/3<br>Кластер: южный кластер<br>Avg PM2.5: 17.44 µg/m³</div>`)[0];
+                popup_9ede39338ef9f38e00683a3f26286f1a.setContent(html_bf2144ab227f6acb1188a578b13d134d);
+            
+        
+
+        circle_marker_beeaca36cd7d3560321a3489b2261f90.bindPopup(popup_9ede39338ef9f38e00683a3f26286f1a)
+        ;
+
+        
+    
+    
+            var circle_marker_e2ed4eee9fb0cc70f9c601705827d336 = L.circleMarker(
+                [43.361506, 77.136689],
+                {"bubblingMouseEvents": true, "color": "#434dfa", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#434dfa", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_8681b8f607ade053fdba630f39c5c171);
+        
+    
+        var popup_51ba66d7c1348ab906279bde366b9204 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_a0eeb247bba364dda0a95e61d36b7701 = $(`<div id="html_a0eeb247bba364dda0a95e61d36b7701" style="width: 100.0%; height: 100.0%;">Улица Жетбаева, 34<br>Кластер: южный кластер<br>Avg PM2.5: 27.33 µg/m³</div>`)[0];
+                popup_51ba66d7c1348ab906279bde366b9204.setContent(html_a0eeb247bba364dda0a95e61d36b7701);
+            
+        
+
+        circle_marker_e2ed4eee9fb0cc70f9c601705827d336.bindPopup(popup_51ba66d7c1348ab906279bde366b9204)
+        ;
+
+        
+    
+    
+            var circle_marker_93074b00bc1ecd30e515de31055eb8bc = L.circleMarker(
+                [43.37108, 76.711384],
+                {"bubblingMouseEvents": true, "color": "#ff4592", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ff4592", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_8681b8f607ade053fdba630f39c5c171);
+        
+    
+        var popup_97e3060b2793510a2c1c102e0a1796b4 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_795a74406df43873b8eeb2f9cc6abc02 = $(`<div id="html_795a74406df43873b8eeb2f9cc6abc02" style="width: 100.0%; height: 100.0%;">Средняя школа им. Бейсебаева п. Береке<br>Кластер: северный кластер<br>Avg PM2.5: 44.29 µg/m³</div>`)[0];
+                popup_97e3060b2793510a2c1c102e0a1796b4.setContent(html_795a74406df43873b8eeb2f9cc6abc02);
+            
+        
+
+        circle_marker_93074b00bc1ecd30e515de31055eb8bc.bindPopup(popup_97e3060b2793510a2c1c102e0a1796b4)
+        ;
+
+        
+    
+    
+            var circle_marker_ed4cc59449ec48f58da355b2c773377d = L.circleMarker(
+                [43.24869, 76.886825],
+                {"bubblingMouseEvents": true, "color": "#434dfa", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#434dfa", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_8681b8f607ade053fdba630f39c5c171);
+        
+    
+        var popup_55334c884ff02c86542cabb67257a207 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_eb4067c77cadb3efef3a4e4996a80019 = $(`<div id="html_eb4067c77cadb3efef3a4e4996a80019" style="width: 100.0%; height: 100.0%;">Богенбай батыра улица, 314<br>Кластер: южный кластер<br>Avg PM2.5: 30.00 µg/m³</div>`)[0];
+                popup_55334c884ff02c86542cabb67257a207.setContent(html_eb4067c77cadb3efef3a4e4996a80019);
+            
+        
+
+        circle_marker_ed4cc59449ec48f58da355b2c773377d.bindPopup(popup_55334c884ff02c86542cabb67257a207)
+        ;
+
+        
+    
+    
+            var circle_marker_829cc6d6ec2932aa9a7c024b98c172b0 = L.circleMarker(
+                [43.220361, 76.954039],
+                {"bubblingMouseEvents": true, "color": "#434dfa", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#434dfa", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_8681b8f607ade053fdba630f39c5c171);
+        
+    
+        var popup_5fc9ffd442be3a1bd9a1135e0fa07f3d = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_16a1db69485be0b80e625e833abf63f2 = $(`<div id="html_16a1db69485be0b80e625e833abf63f2" style="width: 100.0%; height: 100.0%;">Школа лицей 163<br>Кластер: южный кластер<br>Avg PM2.5: 20.80 µg/m³</div>`)[0];
+                popup_5fc9ffd442be3a1bd9a1135e0fa07f3d.setContent(html_16a1db69485be0b80e625e833abf63f2);
+            
+        
+
+        circle_marker_829cc6d6ec2932aa9a7c024b98c172b0.bindPopup(popup_5fc9ffd442be3a1bd9a1135e0fa07f3d)
+        ;
+
+        
+    
+    
+            var circle_marker_c2fb914437c2a748701f27a8af9658d5 = L.circleMarker(
+                [43.233484, 76.863948],
+                {"bubblingMouseEvents": true, "color": "#434dfa", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#434dfa", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_8681b8f607ade053fdba630f39c5c171);
+        
+    
+        var popup_e18e0b789176c3ce916c2eb41f077a16 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_27017db0d088a3784b5ee2b7096e5f14 = $(`<div id="html_27017db0d088a3784b5ee2b7096e5f14" style="width: 100.0%; height: 100.0%;">5-й микрорайон, 39<br>Кластер: южный кластер<br>Avg PM2.5: 25.33 µg/m³</div>`)[0];
+                popup_e18e0b789176c3ce916c2eb41f077a16.setContent(html_27017db0d088a3784b5ee2b7096e5f14);
+            
+        
+
+        circle_marker_c2fb914437c2a748701f27a8af9658d5.bindPopup(popup_e18e0b789176c3ce916c2eb41f077a16)
+        ;
+
+        
+    
+    
+            var circle_marker_b47fdbe3794ae390ea8277984723e295 = L.circleMarker(
+                [43.3549, 76.9524],
+                {"bubblingMouseEvents": true, "color": "#ff4592", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ff4592", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_8681b8f607ade053fdba630f39c5c171);
+        
+    
+        var popup_bc51c353bd646da27e4eb13abaaa2483 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_03966813fdac1627c55169708c9e2287 = $(`<div id="html_03966813fdac1627c55169708c9e2287" style="width: 100.0%; height: 100.0%;">Школа №85<br>Кластер: северный кластер<br>Avg PM2.5: 53.59 µg/m³</div>`)[0];
+                popup_bc51c353bd646da27e4eb13abaaa2483.setContent(html_03966813fdac1627c55169708c9e2287);
+            
+        
+
+        circle_marker_b47fdbe3794ae390ea8277984723e295.bindPopup(popup_bc51c353bd646da27e4eb13abaaa2483)
+        ;
+
+        
+    
+    
+            var circle_marker_7f18e84c18b54b461d0a161aa5983cfe = L.circleMarker(
+                [43.195214, 76.863958],
+                {"bubblingMouseEvents": true, "color": "#434dfa", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#434dfa", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_8681b8f607ade053fdba630f39c5c171);
+        
+    
+        var popup_e73533c2fa74f380fbe4906817408eea = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_0ffd68cb5bd8af4e4c7a8fe124a31f15 = $(`<div id="html_0ffd68cb5bd8af4e4c7a8fe124a31f15" style="width: 100.0%; height: 100.0%;">Улица Аскарова, 3а · улица Аскарова, 3а<br>Кластер: южный кластер<br>Avg PM2.5: 23.46 µg/m³</div>`)[0];
+                popup_e73533c2fa74f380fbe4906817408eea.setContent(html_0ffd68cb5bd8af4e4c7a8fe124a31f15);
+            
+        
+
+        circle_marker_7f18e84c18b54b461d0a161aa5983cfe.bindPopup(popup_e73533c2fa74f380fbe4906817408eea)
+        ;
+
+        
+    
+    
+            var circle_marker_c4c818eb4f7a25362d00c7e008a40e53 = L.circleMarker(
+                [43.3246697, 76.8393761],
+                {"bubblingMouseEvents": true, "color": "#434dfa", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#434dfa", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_8681b8f607ade053fdba630f39c5c171);
+        
+    
+        var popup_ac8811421e0c711a23819f99ae8202a9 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_cce2939ef8240e079c713b86581e132d = $(`<div id="html_cce2939ef8240e079c713b86581e132d" style="width: 100.0%; height: 100.0%;">Школа 212<br>Кластер: южный кластер<br>Avg PM2.5: 29.46 µg/m³</div>`)[0];
+                popup_ac8811421e0c711a23819f99ae8202a9.setContent(html_cce2939ef8240e079c713b86581e132d);
+            
+        
+
+        circle_marker_c4c818eb4f7a25362d00c7e008a40e53.bindPopup(popup_ac8811421e0c711a23819f99ae8202a9)
+        ;
+
+        
+    
+    
+            var circle_marker_2c37c7378ca76a67ea769e113049666c = L.circleMarker(
+                [43.32379, 76.911056],
+                {"bubblingMouseEvents": true, "color": "#ff4592", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ff4592", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_8681b8f607ade053fdba630f39c5c171);
+        
+    
+        var popup_c4fb154a93f24c2db5c563e9050fb41a = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_66f69132701c63ae845b9fae7cb3f655 = $(`<div id="html_66f69132701c63ae845b9fae7cb3f655" style="width: 100.0%; height: 100.0%;">Жумабаева, 178<br>Кластер: северный кластер<br>Avg PM2.5: 45.24 µg/m³</div>`)[0];
+                popup_c4fb154a93f24c2db5c563e9050fb41a.setContent(html_66f69132701c63ae845b9fae7cb3f655);
+            
+        
+
+        circle_marker_2c37c7378ca76a67ea769e113049666c.bindPopup(popup_c4fb154a93f24c2db5c563e9050fb41a)
+        ;
+
+        
+    
+    
+            var circle_marker_dcb8b1f120135f0ddf77cdf179faea8a = L.circleMarker(
+                [43.383823, 77.11627],
+                {"bubblingMouseEvents": true, "color": "#ff4592", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ff4592", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_8681b8f607ade053fdba630f39c5c171);
+        
+    
+        var popup_a20099a4b8a3d18c6d04756c2d7eb4d0 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_c2ae77dc344318cebba02ccadc6f0936 = $(`<div id="html_c2ae77dc344318cebba02ccadc6f0936" style="width: 100.0%; height: 100.0%;">Школа №33 Панфилово<br>Кластер: северный кластер<br>Avg PM2.5: 36.39 µg/m³</div>`)[0];
+                popup_a20099a4b8a3d18c6d04756c2d7eb4d0.setContent(html_c2ae77dc344318cebba02ccadc6f0936);
+            
+        
+
+        circle_marker_dcb8b1f120135f0ddf77cdf179faea8a.bindPopup(popup_a20099a4b8a3d18c6d04756c2d7eb4d0)
+        ;
+
+        
+    
+    
+            var circle_marker_b9e9238f59e03942969e1333069237de = L.circleMarker(
+                [43.2886, 76.9765],
+                {"bubblingMouseEvents": true, "color": "#434dfa", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#434dfa", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_8681b8f607ade053fdba630f39c5c171);
+        
+    
+        var popup_001c4d07ef9eda3b9b8d32fe9377d328 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_24bf03fee6de99e70a9e2d30fd12ac71 = $(`<div id="html_24bf03fee6de99e70a9e2d30fd12ac71" style="width: 100.0%; height: 100.0%;">Школа №98<br>Кластер: южный кластер<br>Avg PM2.5: 26.78 µg/m³</div>`)[0];
+                popup_001c4d07ef9eda3b9b8d32fe9377d328.setContent(html_24bf03fee6de99e70a9e2d30fd12ac71);
+            
+        
+
+        circle_marker_b9e9238f59e03942969e1333069237de.bindPopup(popup_001c4d07ef9eda3b9b8d32fe9377d328)
+        ;
+
+        
+    
+    
+            var circle_marker_05b94aa91f04dbe5616eb7835e872434 = L.circleMarker(
+                [43.3054, 76.9312],
+                {"bubblingMouseEvents": true, "color": "#ff4592", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ff4592", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_8681b8f607ade053fdba630f39c5c171);
+        
+    
+        var popup_95777a94d66658afbbb6ec751648d7da = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_75dacc1730417e13a078ca73ee0a08ed = $(`<div id="html_75dacc1730417e13a078ca73ee0a08ed" style="width: 100.0%; height: 100.0%;">Улица Вагжанова, 38<br>Кластер: северный кластер<br>Avg PM2.5: 45.89 µg/m³</div>`)[0];
+                popup_95777a94d66658afbbb6ec751648d7da.setContent(html_75dacc1730417e13a078ca73ee0a08ed);
+            
+        
+
+        circle_marker_05b94aa91f04dbe5616eb7835e872434.bindPopup(popup_95777a94d66658afbbb6ec751648d7da)
+        ;
+
+        
+    
+    
+            var circle_marker_b1c780876a2edc0fe30992735018f77d = L.circleMarker(
+                [43.281109, 76.88058],
+                {"bubblingMouseEvents": true, "color": "#ff4592", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ff4592", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_8681b8f607ade053fdba630f39c5c171);
+        
+    
+        var popup_bae29aa82b088f6361b17acca571aa28 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_9aa1f2b70c558c1d536f54110ecbb674 = $(`<div id="html_9aa1f2b70c558c1d536f54110ecbb674" style="width: 100.0%; height: 100.0%;">Школа №151<br>Кластер: северный кластер<br>Avg PM2.5: 36.12 µg/m³</div>`)[0];
+                popup_bae29aa82b088f6361b17acca571aa28.setContent(html_9aa1f2b70c558c1d536f54110ecbb674);
+            
+        
+
+        circle_marker_b1c780876a2edc0fe30992735018f77d.bindPopup(popup_bae29aa82b088f6361b17acca571aa28)
+        ;
+
+        
+    
+    
+            var circle_marker_e2b96583c8acee4102f991233e9f4ec1 = L.circleMarker(
+                [43.183334, 76.841609],
+                {"bubblingMouseEvents": true, "color": "#434dfa", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#434dfa", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_8681b8f607ade053fdba630f39c5c171);
+        
+    
+        var popup_0cb5c26f0feb8174f57851e862acb794 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_4ff6f981076ba1b4062576fd7af432cf = $(`<div id="html_4ff6f981076ba1b4062576fd7af432cf" style="width: 100.0%; height: 100.0%;">Қарағайлы<br>Кластер: южный кластер<br>Avg PM2.5: 28.96 µg/m³</div>`)[0];
+                popup_0cb5c26f0feb8174f57851e862acb794.setContent(html_4ff6f981076ba1b4062576fd7af432cf);
+            
+        
+
+        circle_marker_e2b96583c8acee4102f991233e9f4ec1.bindPopup(popup_0cb5c26f0feb8174f57851e862acb794)
+        ;
+
+        
+    
+    
+            var circle_marker_eb1da682f685677276028f27bf501f8c = L.circleMarker(
+                [43.222714, 76.846684],
+                {"bubblingMouseEvents": true, "color": "#434dfa", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#434dfa", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_8681b8f607ade053fdba630f39c5c171);
+        
+    
+        var popup_5b91f7aae24e75179ef27320a2193663 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_cc238ceed89a98e4bac47fe0eacb0b48 = $(`<div id="html_cc238ceed89a98e4bac47fe0eacb0b48" style="width: 100.0%; height: 100.0%;">Микрорайон Жетысу-2, 47<br>Кластер: южный кластер<br>Avg PM2.5: 31.67 µg/m³</div>`)[0];
+                popup_5b91f7aae24e75179ef27320a2193663.setContent(html_cc238ceed89a98e4bac47fe0eacb0b48);
+            
+        
+
+        circle_marker_eb1da682f685677276028f27bf501f8c.bindPopup(popup_5b91f7aae24e75179ef27320a2193663)
+        ;
+
+        
+    
+    
+            var circle_marker_f7662fa8ddfa15bcd2350bda0049aa98 = L.circleMarker(
+                [43.273379, 76.667956],
+                {"bubblingMouseEvents": true, "color": "#ff4592", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ff4592", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_8681b8f607ade053fdba630f39c5c171);
+        
+    
+        var popup_139b7fc75ba07cdc215017aa09c9250a = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_e8b0258a98c65c8c0667b65117d4d703 = $(`<div id="html_e8b0258a98c65c8c0667b65117d4d703" style="width: 100.0%; height: 100.0%;">Zhambyl<br>Кластер: северный кластер<br>Avg PM2.5: 54.06 µg/m³</div>`)[0];
+                popup_139b7fc75ba07cdc215017aa09c9250a.setContent(html_e8b0258a98c65c8c0667b65117d4d703);
+            
+        
+
+        circle_marker_f7662fa8ddfa15bcd2350bda0049aa98.bindPopup(popup_139b7fc75ba07cdc215017aa09c9250a)
+        ;
+
+        
+    
+    
+            var circle_marker_bd5ce7b04691da8f70ec8638dafd0521 = L.circleMarker(
+                [43.2734, 76.939],
+                {"bubblingMouseEvents": true, "color": "#ff4592", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ff4592", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_8681b8f607ade053fdba630f39c5c171);
+        
+    
+        var popup_c8f799bdf4f49b40b7d85a5fbcbff88f = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_b6e3141f075adce0eef73de1a11b2078 = $(`<div id="html_b6e3141f075adce0eef73de1a11b2078" style="width: 100.0%; height: 100.0%;">Алматы-2<br>Кластер: северный кластер<br>Avg PM2.5: 37.52 µg/m³</div>`)[0];
+                popup_c8f799bdf4f49b40b7d85a5fbcbff88f.setContent(html_b6e3141f075adce0eef73de1a11b2078);
+            
+        
+
+        circle_marker_bd5ce7b04691da8f70ec8638dafd0521.bindPopup(popup_c8f799bdf4f49b40b7d85a5fbcbff88f)
+        ;
+
+        
+    
+    
+            var circle_marker_678e71698dfe0063cf1225a077e9cc3e = L.circleMarker(
+                [43.338228, 76.899023],
+                {"bubblingMouseEvents": true, "color": "#ff4592", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ff4592", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_8681b8f607ade053fdba630f39c5c171);
+        
+    
+        var popup_e60b4ac65bc259ba3e6c1e2c53cd6228 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_3c326be2add82e8add134ba82c9955eb = $(`<div id="html_3c326be2add82e8add134ba82c9955eb" style="width: 100.0%; height: 100.0%;">Школа №179<br>Кластер: северный кластер<br>Avg PM2.5: 53.38 µg/m³</div>`)[0];
+                popup_e60b4ac65bc259ba3e6c1e2c53cd6228.setContent(html_3c326be2add82e8add134ba82c9955eb);
+            
+        
+
+        circle_marker_678e71698dfe0063cf1225a077e9cc3e.bindPopup(popup_e60b4ac65bc259ba3e6c1e2c53cd6228)
+        ;
+
+        
+    
+    
+            var circle_marker_d796c9c6ab8be68829455dc9df3c6981 = L.circleMarker(
+                [43.165782, 76.896243],
+                {"bubblingMouseEvents": true, "color": "#434dfa", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#434dfa", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_8681b8f607ade053fdba630f39c5c171);
+        
+    
+        var popup_34edbf6690781540c92f44637cf34288 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_5a4aef5a3c551f2dd66f1943c559704d = $(`<div id="html_5a4aef5a3c551f2dd66f1943c559704d" style="width: 100.0%; height: 100.0%;">Улица Нурлытау<br>Кластер: южный кластер<br>Avg PM2.5: 21.13 µg/m³</div>`)[0];
+                popup_34edbf6690781540c92f44637cf34288.setContent(html_5a4aef5a3c551f2dd66f1943c559704d);
+            
+        
+
+        circle_marker_d796c9c6ab8be68829455dc9df3c6981.bindPopup(popup_34edbf6690781540c92f44637cf34288)
+        ;
+
+        
+    
+    
+            var circle_marker_265c72087e91bcac25ec55fb2b96f6a6 = L.circleMarker(
+                [43.260367, 76.872522],
+                {"bubblingMouseEvents": true, "color": "#ff4592", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ff4592", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_8681b8f607ade053fdba630f39c5c171);
+        
+    
+        var popup_d9cddb3bd1983838f37faa3e98b94efe = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_89da0562f215b8ea0c13f129bddfcf67 = $(`<div id="html_89da0562f215b8ea0c13f129bddfcf67" style="width: 100.0%; height: 100.0%;">Школа-лицей 166<br>Кластер: северный кластер<br>Avg PM2.5: 35.38 µg/m³</div>`)[0];
+                popup_d9cddb3bd1983838f37faa3e98b94efe.setContent(html_89da0562f215b8ea0c13f129bddfcf67);
+            
+        
+
+        circle_marker_265c72087e91bcac25ec55fb2b96f6a6.bindPopup(popup_d9cddb3bd1983838f37faa3e98b94efe)
+        ;
+
+        
+    
+    
+            var circle_marker_d839d658dc292aae5863de313ff5bcee = L.circleMarker(
+                [43.239744, 76.923751],
+                {"bubblingMouseEvents": true, "color": "#434dfa", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#434dfa", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_8681b8f607ade053fdba630f39c5c171);
+        
+    
+        var popup_e4a890ed2701137a618000554ab274a1 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_f116d2bbc138b621f715ade2eaf5e3bd = $(`<div id="html_f116d2bbc138b621f715ade2eaf5e3bd" style="width: 100.0%; height: 100.0%;">Центральный Стадион<br>Кластер: южный кластер<br>Avg PM2.5: 29.24 µg/m³</div>`)[0];
+                popup_e4a890ed2701137a618000554ab274a1.setContent(html_f116d2bbc138b621f715ade2eaf5e3bd);
+            
+        
+
+        circle_marker_d839d658dc292aae5863de313ff5bcee.bindPopup(popup_e4a890ed2701137a618000554ab274a1)
+        ;
+
+        
+    
+    
+            var circle_marker_70a38336c53bd40e5c793f647e740692 = L.circleMarker(
+                [43.345916, 76.971231],
+                {"bubblingMouseEvents": true, "color": "#ff4592", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ff4592", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_8681b8f607ade053fdba630f39c5c171);
+        
+    
+        var popup_ead23def5a7098a174b100a2a8e4de77 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_e3b46bb5291ec585feed4897ca0f74b6 = $(`<div id="html_e3b46bb5291ec585feed4897ca0f74b6" style="width: 100.0%; height: 100.0%;">Улица Бекмаханова, 96/2а<br>Кластер: северный кластер<br>Avg PM2.5: 50.51 µg/m³</div>`)[0];
+                popup_ead23def5a7098a174b100a2a8e4de77.setContent(html_e3b46bb5291ec585feed4897ca0f74b6);
+            
+        
+
+        circle_marker_70a38336c53bd40e5c793f647e740692.bindPopup(popup_ead23def5a7098a174b100a2a8e4de77)
+        ;
+
+        
+    
+    
+            var circle_marker_1029abf986926cd89329d63508dac96d = L.circleMarker(
+                [43.332157, 76.649816],
+                {"bubblingMouseEvents": true, "color": "#ff4592", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ff4592", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_8681b8f607ade053fdba630f39c5c171);
+        
+    
+        var popup_92afc3748e31d506d81cdcc35a238cbf = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_fff1fbc06b8caa8e79b37406230e4c3e = $(`<div id="html_fff1fbc06b8caa8e79b37406230e4c3e" style="width: 100.0%; height: 100.0%;">Кошмамбет средняя школа<br>Кластер: северный кластер<br>Avg PM2.5: 32.66 µg/m³</div>`)[0];
+                popup_92afc3748e31d506d81cdcc35a238cbf.setContent(html_fff1fbc06b8caa8e79b37406230e4c3e);
+            
+        
+
+        circle_marker_1029abf986926cd89329d63508dac96d.bindPopup(popup_92afc3748e31d506d81cdcc35a238cbf)
+        ;
+
+        
+    
+    
+            var circle_marker_4fafb3472e329cb3b8981b79f54de5a7 = L.circleMarker(
+                [43.336368, 76.977504],
+                {"bubblingMouseEvents": true, "color": "#ff4592", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ff4592", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_8681b8f607ade053fdba630f39c5c171);
+        
+    
+        var popup_5a8ff793d0acc7c27e8af4b1fa23bfcf = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_0c2c7726217f51ff45ae1e236b1cb070 = $(`<div id="html_0c2c7726217f51ff45ae1e236b1cb070" style="width: 100.0%; height: 100.0%;">Школа №170<br>Кластер: северный кластер<br>Avg PM2.5: 45.75 µg/m³</div>`)[0];
+                popup_5a8ff793d0acc7c27e8af4b1fa23bfcf.setContent(html_0c2c7726217f51ff45ae1e236b1cb070);
+            
+        
+
+        circle_marker_4fafb3472e329cb3b8981b79f54de5a7.bindPopup(popup_5a8ff793d0acc7c27e8af4b1fa23bfcf)
+        ;
+
+        
+    
+    
+            var circle_marker_fc6077972638e72161d5e41104eb2bf1 = L.circleMarker(
+                [43.236967, 76.899545],
+                {"bubblingMouseEvents": true, "color": "#434dfa", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#434dfa", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_8681b8f607ade053fdba630f39c5c171);
+        
+    
+        var popup_4797c742e44eb1bb321230099d6844ed = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_208498e160e09e8c3e8f82d3c6dd498f = $(`<div id="html_208498e160e09e8c3e8f82d3c6dd498f" style="width: 100.0%; height: 100.0%;">Zharokov - Mynbayev st.<br>Кластер: южный кластер<br>Avg PM2.5: 35.49 µg/m³</div>`)[0];
+                popup_4797c742e44eb1bb321230099d6844ed.setContent(html_208498e160e09e8c3e8f82d3c6dd498f);
+            
+        
+
+        circle_marker_fc6077972638e72161d5e41104eb2bf1.bindPopup(popup_4797c742e44eb1bb321230099d6844ed)
+        ;
+
+        
+    
+    
+            var circle_marker_4cf574887e34d2cda05fad8235378735 = L.circleMarker(
+                [43.368962, 76.98686],
+                {"bubblingMouseEvents": true, "color": "#ff4592", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ff4592", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_8681b8f607ade053fdba630f39c5c171);
+        
+    
+        var popup_529464d6a1338e852894ef1a88dfbaa0 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_2334ccbdecd5d80d00506cec7047a31d = $(`<div id="html_2334ccbdecd5d80d00506cec7047a31d" style="width: 100.0%; height: 100.0%;">Проспект Суюнбая, 292з<br>Кластер: северный кластер<br>Avg PM2.5: 41.19 µg/m³</div>`)[0];
+                popup_529464d6a1338e852894ef1a88dfbaa0.setContent(html_2334ccbdecd5d80d00506cec7047a31d);
+            
+        
+
+        circle_marker_4cf574887e34d2cda05fad8235378735.bindPopup(popup_529464d6a1338e852894ef1a88dfbaa0)
+        ;
+
+        
+    
+    
+            var circle_marker_878dc6a200ca88e212f3098c5714abb8 = L.circleMarker(
+                [43.250935, 76.833817],
+                {"bubblingMouseEvents": true, "color": "#ff4592", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ff4592", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_8681b8f607ade053fdba630f39c5c171);
+        
+    
+        var popup_25e7b26033eccc69cac48a6a4b191ef7 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_729033589e537cf8073681c98d2d5c92 = $(`<div id="html_729033589e537cf8073681c98d2d5c92" style="width: 100.0%; height: 100.0%;">Лизунова улица, 2/1<br>Кластер: северный кластер<br>Avg PM2.5: 42.73 µg/m³</div>`)[0];
+                popup_25e7b26033eccc69cac48a6a4b191ef7.setContent(html_729033589e537cf8073681c98d2d5c92);
+            
+        
+
+        circle_marker_878dc6a200ca88e212f3098c5714abb8.bindPopup(popup_25e7b26033eccc69cac48a6a4b191ef7)
+        ;
+
+        
+    
+    
+            var circle_marker_5a0aabc89964f92364ed3645b3ee48ad = L.circleMarker(
+                [43.245167, 76.834058],
+                {"bubblingMouseEvents": true, "color": "#ff4592", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ff4592", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_8681b8f607ade053fdba630f39c5c171);
+        
+    
+        var popup_e934e4a67c8a4b13df6b4849d00bef9b = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_ff5aa757cc7fc37a23804d52131903ab = $(`<div id="html_ff5aa757cc7fc37a23804d52131903ab" style="width: 100.0%; height: 100.0%;">Sharipov St.- Raimbek St. cros<br>Кластер: северный кластер<br>Avg PM2.5: 39.32 µg/m³</div>`)[0];
+                popup_e934e4a67c8a4b13df6b4849d00bef9b.setContent(html_ff5aa757cc7fc37a23804d52131903ab);
+            
+        
+
+        circle_marker_5a0aabc89964f92364ed3645b3ee48ad.bindPopup(popup_e934e4a67c8a4b13df6b4849d00bef9b)
+        ;
+
+        
+    
+    
+            var circle_marker_7db6f681439c2866b347148cf20ebb5e = L.circleMarker(
+                [43.210339, 76.908258],
+                {"bubblingMouseEvents": true, "color": "#434dfa", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#434dfa", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_8681b8f607ade053fdba630f39c5c171);
+        
+    
+        var popup_7905939b30bdeea56bc283a03925857f = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_af7701dbad22225a7075d1a1dcd8e336 = $(`<div id="html_af7701dbad22225a7075d1a1dcd8e336" style="width: 100.0%; height: 100.0%;">Улица Ходжанова, 2/2<br>Кластер: южный кластер<br>Avg PM2.5: 20.59 µg/m³</div>`)[0];
+                popup_7905939b30bdeea56bc283a03925857f.setContent(html_af7701dbad22225a7075d1a1dcd8e336);
+            
+        
+
+        circle_marker_7db6f681439c2866b347148cf20ebb5e.bindPopup(popup_7905939b30bdeea56bc283a03925857f)
+        ;
+
+        
+    
+    
+            var circle_marker_c395b33ecaa57822993e195daa44f805 = L.circleMarker(
+                [43.2662, 76.986],
+                {"bubblingMouseEvents": true, "color": "#434dfa", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#434dfa", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_8681b8f607ade053fdba630f39c5c171);
+        
+    
+        var popup_e6e095dcb8367c95233a70b9c3ab3e5f = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_c0d0af82e8b78b9c364f7adb8f39a781 = $(`<div id="html_c0d0af82e8b78b9c364f7adb8f39a781" style="width: 100.0%; height: 100.0%;">Улица Пензенская, 25<br>Кластер: южный кластер<br>Avg PM2.5: 24.47 µg/m³</div>`)[0];
+                popup_e6e095dcb8367c95233a70b9c3ab3e5f.setContent(html_c0d0af82e8b78b9c364f7adb8f39a781);
+            
+        
+
+        circle_marker_c395b33ecaa57822993e195daa44f805.bindPopup(popup_e6e095dcb8367c95233a70b9c3ab3e5f)
+        ;
+
+        
+    
+    
+            var circle_marker_4994ced6bcb0dee985899b3e34b7774c = L.circleMarker(
+                [43.378171, 76.836398],
+                {"bubblingMouseEvents": true, "color": "#ff4592", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ff4592", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_8681b8f607ade053fdba630f39c5c171);
+        
+    
+        var popup_ce8ac384dc26f62cb5af60923428e5d5 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_38179445d1767f37c35b0c66a66d3ced = $(`<div id="html_38179445d1767f37c35b0c66a66d3ced" style="width: 100.0%; height: 100.0%;">Школа №40 КазЦИК<br>Кластер: северный кластер<br>Avg PM2.5: 44.23 µg/m³</div>`)[0];
+                popup_ce8ac384dc26f62cb5af60923428e5d5.setContent(html_38179445d1767f37c35b0c66a66d3ced);
+            
+        
+
+        circle_marker_4994ced6bcb0dee985899b3e34b7774c.bindPopup(popup_ce8ac384dc26f62cb5af60923428e5d5)
+        ;
+
+        
+    
+    
+            var circle_marker_6c8e6e0e5447095e0b914eecb4e7a82d = L.circleMarker(
+                [43.277711, 77.00547],
+                {"bubblingMouseEvents": true, "color": "#434dfa", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#434dfa", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_8681b8f607ade053fdba630f39c5c171);
+        
+    
+        var popup_0493b44d05f2a90a59b0e6e7f498b839 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_700607d03719ca558841332c4fbcac64 = $(`<div id="html_700607d03719ca558841332c4fbcac64" style="width: 100.0%; height: 100.0%;">Улица Акмешит, 33<br>Кластер: южный кластер<br>Avg PM2.5: 24.82 µg/m³</div>`)[0];
+                popup_0493b44d05f2a90a59b0e6e7f498b839.setContent(html_700607d03719ca558841332c4fbcac64);
+            
+        
+
+        circle_marker_6c8e6e0e5447095e0b914eecb4e7a82d.bindPopup(popup_0493b44d05f2a90a59b0e6e7f498b839)
+        ;
+
+        
+    
+    
+            var circle_marker_a5ac42440de12dc6395e3f75f6b5fd1c = L.circleMarker(
+                [43.249789, 76.814599],
+                {"bubblingMouseEvents": true, "color": "#434dfa", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#434dfa", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_8681b8f607ade053fdba630f39c5c171);
+        
+    
+        var popup_e55fc2d4f43d8eb637ad4b12d144a67c = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_d7e064e8c2a68aad392c069afdec7c55 = $(`<div id="html_d7e064e8c2a68aad392c069afdec7c55" style="width: 100.0%; height: 100.0%;">Лицей №178<br>Кластер: южный кластер<br>Avg PM2.5: 34.42 µg/m³</div>`)[0];
+                popup_e55fc2d4f43d8eb637ad4b12d144a67c.setContent(html_d7e064e8c2a68aad392c069afdec7c55);
+            
+        
+
+        circle_marker_a5ac42440de12dc6395e3f75f6b5fd1c.bindPopup(popup_e55fc2d4f43d8eb637ad4b12d144a67c)
+        ;
+
+        
+    
+    
+            var circle_marker_32a43e1bd61dafab22bd53f9849efaca = L.circleMarker(
+                [43.225489, 76.868495],
+                {"bubblingMouseEvents": true, "color": "#434dfa", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#434dfa", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_8681b8f607ade053fdba630f39c5c171);
+        
+    
+        var popup_53591d9df1eac7c884bf3bccb459aa1b = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_6fa32d45dfd3db2dc279940fb019f6a4 = $(`<div id="html_6fa32d45dfd3db2dc279940fb019f6a4" style="width: 100.0%; height: 100.0%;">Школа №116<br>Кластер: южный кластер<br>Avg PM2.5: 23.43 µg/m³</div>`)[0];
+                popup_53591d9df1eac7c884bf3bccb459aa1b.setContent(html_6fa32d45dfd3db2dc279940fb019f6a4);
+            
+        
+
+        circle_marker_32a43e1bd61dafab22bd53f9849efaca.bindPopup(popup_53591d9df1eac7c884bf3bccb459aa1b)
+        ;
+
+        
+    
+    
+            var circle_marker_cd8cf7f89962f4f8925fd4f09f781ceb = L.circleMarker(
+                [43.250061, 76.917796],
+                {"bubblingMouseEvents": true, "color": "#434dfa", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#434dfa", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_8681b8f607ade053fdba630f39c5c171);
+        
+    
+        var popup_07672426b9896e198b4bbef0f0bf1f0e = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_99b25cf3404f187c1eecb12725ebf24b = $(`<div id="html_99b25cf3404f187c1eecb12725ebf24b" style="width: 100.0%; height: 100.0%;">улица: Улица Кожамкулова, 202<br>Кластер: южный кластер<br>Avg PM2.5: 24.28 µg/m³</div>`)[0];
+                popup_07672426b9896e198b4bbef0f0bf1f0e.setContent(html_99b25cf3404f187c1eecb12725ebf24b);
+            
+        
+
+        circle_marker_cd8cf7f89962f4f8925fd4f09f781ceb.bindPopup(popup_07672426b9896e198b4bbef0f0bf1f0e)
+        ;
+
+        
+    
+    
+            var circle_marker_71dd948de75527bc4442a2d52bbf28b7 = L.circleMarker(
+                [43.219758, 76.802115],
+                {"bubblingMouseEvents": true, "color": "#434dfa", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#434dfa", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_8681b8f607ade053fdba630f39c5c171);
+        
+    
+        var popup_b9a68623c42538bbef606b1240185df9 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_72fa8104ef2227a79d8a4c63d5927482 = $(`<div id="html_72fa8104ef2227a79d8a4c63d5927482" style="width: 100.0%; height: 100.0%;">Школа №157<br>Кластер: южный кластер<br>Avg PM2.5: 26.35 µg/m³</div>`)[0];
+                popup_b9a68623c42538bbef606b1240185df9.setContent(html_72fa8104ef2227a79d8a4c63d5927482);
+            
+        
+
+        circle_marker_71dd948de75527bc4442a2d52bbf28b7.bindPopup(popup_b9a68623c42538bbef606b1240185df9)
+        ;
+
+        
+    
+    
+            var circle_marker_fffbd8da9e24219c36ddfb63afd7bd6f = L.circleMarker(
+                [43.216589, 76.889973],
+                {"bubblingMouseEvents": true, "color": "#434dfa", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#434dfa", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_8681b8f607ade053fdba630f39c5c171);
+        
+    
+        var popup_e7f3ccaa31515954cc232e4048ce5c5f = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_31f22d206d014da536e106294bb67952 = $(`<div id="html_31f22d206d014da536e106294bb67952" style="width: 100.0%; height: 100.0%;">Улица Бокина, 3/1<br>Кластер: южный кластер<br>Avg PM2.5: 26.06 µg/m³</div>`)[0];
+                popup_e7f3ccaa31515954cc232e4048ce5c5f.setContent(html_31f22d206d014da536e106294bb67952);
+            
+        
+
+        circle_marker_fffbd8da9e24219c36ddfb63afd7bd6f.bindPopup(popup_e7f3ccaa31515954cc232e4048ce5c5f)
+        ;
+
+        
+    
+    
+            var circle_marker_cd36225a2ab5665d03be5dbd2ed65fa2 = L.circleMarker(
+                [43.3363, 76.9932],
+                {"bubblingMouseEvents": true, "color": "#ff4592", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ff4592", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_8681b8f607ade053fdba630f39c5c171);
+        
+    
+        var popup_1547efe71abc4dcacc6f365664779c3f = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_3b3ab8c1f1bb6d6f111cc0d3ff6010b3 = $(`<div id="html_3b3ab8c1f1bb6d6f111cc0d3ff6010b3" style="width: 100.0%; height: 100.0%;">Сквер Маяк<br>Кластер: северный кластер<br>Avg PM2.5: 48.14 µg/m³</div>`)[0];
+                popup_1547efe71abc4dcacc6f365664779c3f.setContent(html_3b3ab8c1f1bb6d6f111cc0d3ff6010b3);
+            
+        
+
+        circle_marker_cd36225a2ab5665d03be5dbd2ed65fa2.bindPopup(popup_1547efe71abc4dcacc6f365664779c3f)
+        ;
+
+        
+    
+    
+            var circle_marker_fd87147f16033680ed4766182f1a9304 = L.circleMarker(
+                [43.175949, 76.872642],
+                {"bubblingMouseEvents": true, "color": "#434dfa", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#434dfa", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_8681b8f607ade053fdba630f39c5c171);
+        
+    
+        var popup_53c6a80def81b1461c30855d2925658d = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_9cce2fee4356a8dd373c325d00a5ca85 = $(`<div id="html_9cce2fee4356a8dd373c325d00a5ca85" style="width: 100.0%; height: 100.0%;">Санаторий Алматы, 3<br>Кластер: южный кластер<br>Avg PM2.5: 19.66 µg/m³</div>`)[0];
+                popup_53c6a80def81b1461c30855d2925658d.setContent(html_9cce2fee4356a8dd373c325d00a5ca85);
+            
+        
+
+        circle_marker_fd87147f16033680ed4766182f1a9304.bindPopup(popup_53c6a80def81b1461c30855d2925658d)
+        ;
+
+        
+    
+    
+            var circle_marker_475101b18c2ac283c0243802b5fcf1f6 = L.circleMarker(
+                [43.401227, 76.75129],
+                {"bubblingMouseEvents": true, "color": "#ff4592", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ff4592", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_8681b8f607ade053fdba630f39c5c171);
+        
+    
+        var popup_64a61ed268d6ac43f583a285947eacb6 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_c98bd59e7cbf8b324e2d6f22d7b57951 = $(`<div id="html_c98bd59e7cbf8b324e2d6f22d7b57951" style="width: 100.0%; height: 100.0%;">Школа им. Исаева, с. Исаево<br>Кластер: северный кластер<br>Avg PM2.5: 36.77 µg/m³</div>`)[0];
+                popup_64a61ed268d6ac43f583a285947eacb6.setContent(html_c98bd59e7cbf8b324e2d6f22d7b57951);
+            
+        
+
+        circle_marker_475101b18c2ac283c0243802b5fcf1f6.bindPopup(popup_64a61ed268d6ac43f583a285947eacb6)
+        ;
+
+        
+    
+    
+            var circle_marker_9f93a1f0a8e278cfe00e4f62e34efce3 = L.circleMarker(
+                [43.293731, 76.91535],
+                {"bubblingMouseEvents": true, "color": "#ff4592", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ff4592", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_8681b8f607ade053fdba630f39c5c171);
+        
+    
+        var popup_da29f2d2708fd87f3e320fac71f9a7fd = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_255ef46a0bbc40dc8689fd04f80c25b7 = $(`<div id="html_255ef46a0bbc40dc8689fd04f80c25b7" style="width: 100.0%; height: 100.0%;">Школа 112<br>Кластер: северный кластер<br>Avg PM2.5: 35.38 µg/m³</div>`)[0];
+                popup_da29f2d2708fd87f3e320fac71f9a7fd.setContent(html_255ef46a0bbc40dc8689fd04f80c25b7);
+            
+        
+
+        circle_marker_9f93a1f0a8e278cfe00e4f62e34efce3.bindPopup(popup_da29f2d2708fd87f3e320fac71f9a7fd)
+        ;
+
+        
+    
+    
+            var circle_marker_f8de3640cc4938bdb6951704f8efa60d = L.circleMarker(
+                [43.220269, 76.926513],
+                {"bubblingMouseEvents": true, "color": "#434dfa", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#434dfa", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_8681b8f607ade053fdba630f39c5c171);
+        
+    
+        var popup_905bb2aeaa75823d7b056ba0a5e19006 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_b92072665bb60a09976b83ef7fa36b60 = $(`<div id="html_b92072665bb60a09976b83ef7fa36b60" style="width: 100.0%; height: 100.0%;">Проспект Аль-Фараби, 71/20Б<br>Кластер: южный кластер<br>Avg PM2.5: 21.36 µg/m³</div>`)[0];
+                popup_905bb2aeaa75823d7b056ba0a5e19006.setContent(html_b92072665bb60a09976b83ef7fa36b60);
+            
+        
+
+        circle_marker_f8de3640cc4938bdb6951704f8efa60d.bindPopup(popup_905bb2aeaa75823d7b056ba0a5e19006)
+        ;
+
+        
+    
+    
+            var circle_marker_958307888b7edae234e884ea0c8297cb = L.circleMarker(
+                [43.222093, 76.89939],
+                {"bubblingMouseEvents": true, "color": "#434dfa", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#434dfa", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_8681b8f607ade053fdba630f39c5c171);
+        
+    
+        var popup_9ee905dc2987827bf2f3351ca11c5138 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_63a4121f74990c05efd9f3141eaf69bd = $(`<div id="html_63a4121f74990c05efd9f3141eaf69bd" style="width: 100.0%; height: 100.0%;">Родильный дом , Басенова 2а<br>Кластер: южный кластер<br>Avg PM2.5: 22.05 µg/m³</div>`)[0];
+                popup_9ee905dc2987827bf2f3351ca11c5138.setContent(html_63a4121f74990c05efd9f3141eaf69bd);
+            
+        
+
+        circle_marker_958307888b7edae234e884ea0c8297cb.bindPopup(popup_9ee905dc2987827bf2f3351ca11c5138)
+        ;
+
+        
+    
+    
+            var circle_marker_04fa4636cbab2a27acf616a2b4333818 = L.circleMarker(
+                [43.288016, 76.975792],
+                {"bubblingMouseEvents": true, "color": "#434dfa", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#434dfa", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_8681b8f607ade053fdba630f39c5c171);
+        
+    
+        var popup_55ac2ff3202c0a580831540ae073b62f = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_76de814b55e64fcb82659c9afbce1c39 = $(`<div id="html_76de814b55e64fcb82659c9afbce1c39" style="width: 100.0%; height: 100.0%;">Улица Татибекова, 34<br>Кластер: южный кластер<br>Avg PM2.5: 33.76 µg/m³</div>`)[0];
+                popup_55ac2ff3202c0a580831540ae073b62f.setContent(html_76de814b55e64fcb82659c9afbce1c39);
+            
+        
+
+        circle_marker_04fa4636cbab2a27acf616a2b4333818.bindPopup(popup_55ac2ff3202c0a580831540ae073b62f)
+        ;
+
+        
+    
+    
+            var circle_marker_d39419a492c3ec812e1913bbf92b818b = L.circleMarker(
+                [43.3052, 77.0062],
+                {"bubblingMouseEvents": true, "color": "#434dfa", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#434dfa", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_8681b8f607ade053fdba630f39c5c171);
+        
+    
+        var popup_e4698ae998a2a0ed58e55de4bd970b78 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_3bdffa206f76dc372b71a5f38bb2ad73 = $(`<div id="html_3bdffa206f76dc372b71a5f38bb2ad73" style="width: 100.0%; height: 100.0%;">5-я улица, 3/4<br>Кластер: южный кластер<br>Avg PM2.5: 33.54 µg/m³</div>`)[0];
+                popup_e4698ae998a2a0ed58e55de4bd970b78.setContent(html_3bdffa206f76dc372b71a5f38bb2ad73);
+            
+        
+
+        circle_marker_d39419a492c3ec812e1913bbf92b818b.bindPopup(popup_e4698ae998a2a0ed58e55de4bd970b78)
+        ;
+
+        
+    
+    
+            var circle_marker_fffe58e972f17ee8154787240db10de0 = L.circleMarker(
+                [43.242053, 76.762198],
+                {"bubblingMouseEvents": true, "color": "#ff4592", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ff4592", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_8681b8f607ade053fdba630f39c5c171);
+        
+    
+        var popup_82aaa4bef5d6c7f2bcf610b2fb33c7f3 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_8e2ee5feb9090d85d8552f6c18f58472 = $(`<div id="html_8e2ee5feb9090d85d8552f6c18f58472" style="width: 100.0%; height: 100.0%;">Средняя школа Иргели Іргелі<br>Кластер: северный кластер<br>Avg PM2.5: 41.86 µg/m³</div>`)[0];
+                popup_82aaa4bef5d6c7f2bcf610b2fb33c7f3.setContent(html_8e2ee5feb9090d85d8552f6c18f58472);
+            
+        
+
+        circle_marker_fffe58e972f17ee8154787240db10de0.bindPopup(popup_82aaa4bef5d6c7f2bcf610b2fb33c7f3)
+        ;
+
+        
+    
+    
+            var circle_marker_b957d27aa7f17de70956daf0a1956ef8 = L.circleMarker(
+                [43.395811, 76.98652],
+                {"bubblingMouseEvents": true, "color": "#ff4592", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ff4592", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_8681b8f607ade053fdba630f39c5c171);
+        
+    
+        var popup_34f70726336741857008b4884e9f2b18 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_079a93b47ba876a8bbed36e4a7aaeb5b = $(`<div id="html_079a93b47ba876a8bbed36e4a7aaeb5b" style="width: 100.0%; height: 100.0%;">Алматинский колледж пассажирского транспорта и технологий<br>Кластер: северный кластер<br>Avg PM2.5: 51.86 µg/m³</div>`)[0];
+                popup_34f70726336741857008b4884e9f2b18.setContent(html_079a93b47ba876a8bbed36e4a7aaeb5b);
+            
+        
+
+        circle_marker_b957d27aa7f17de70956daf0a1956ef8.bindPopup(popup_34f70726336741857008b4884e9f2b18)
+        ;
+
+        
+    
+    
+            var circle_marker_96ddba324bf54af3710339b9ca77301b = L.circleMarker(
+                [43.317467, 77.229263],
+                {"bubblingMouseEvents": true, "color": "#434dfa", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#434dfa", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_8681b8f607ade053fdba630f39c5c171);
+        
+    
+        var popup_70cfeb32d75fb3028e94d9daddc1d29e = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_fcba2f0c5be34fa661cdb9333c8529dc = $(`<div id="html_fcba2f0c5be34fa661cdb9333c8529dc" style="width: 100.0%; height: 100.0%;">Талгарская центральная районная больница<br>Кластер: южный кластер<br>Avg PM2.5: 38.05 µg/m³</div>`)[0];
+                popup_70cfeb32d75fb3028e94d9daddc1d29e.setContent(html_fcba2f0c5be34fa661cdb9333c8529dc);
+            
+        
+
+        circle_marker_96ddba324bf54af3710339b9ca77301b.bindPopup(popup_70cfeb32d75fb3028e94d9daddc1d29e)
+        ;
+
+        
+    
+    
+            var circle_marker_f385973c8f97dba9d5b0cdf0dc62b393 = L.circleMarker(
+                [43.31209, 77.098032],
+                {"bubblingMouseEvents": true, "color": "#434dfa", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#434dfa", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_8681b8f607ade053fdba630f39c5c171);
+        
+    
+        var popup_22fb45029c659f3a1fb1996abe65d906 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_748033a1306b497796e01814506a53ec = $(`<div id="html_748033a1306b497796e01814506a53ec" style="width: 100.0%; height: 100.0%;">Школа №32 Белбулак<br>Кластер: южный кластер<br>Avg PM2.5: 28.62 µg/m³</div>`)[0];
+                popup_22fb45029c659f3a1fb1996abe65d906.setContent(html_748033a1306b497796e01814506a53ec);
+            
+        
+
+        circle_marker_f385973c8f97dba9d5b0cdf0dc62b393.bindPopup(popup_22fb45029c659f3a1fb1996abe65d906)
+        ;
+
+        
+    
+    
+            var circle_marker_738c5bfec49554b2b24c529da44796ab = L.circleMarker(
+                [43.217949, 76.969336],
+                {"bubblingMouseEvents": true, "color": "#434dfa", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#434dfa", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_8681b8f607ade053fdba630f39c5c171);
+        
+    
+        var popup_015e0664426f8b4769119fed9a811378 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_605bb0ef45a8a8d4194609713aa687c0 = $(`<div id="html_605bb0ef45a8a8d4194609713aa687c0" style="width: 100.0%; height: 100.0%;">Терренкур<br>Кластер: южный кластер<br>Avg PM2.5: 16.07 µg/m³</div>`)[0];
+                popup_015e0664426f8b4769119fed9a811378.setContent(html_605bb0ef45a8a8d4194609713aa687c0);
+            
+        
+
+        circle_marker_738c5bfec49554b2b24c529da44796ab.bindPopup(popup_015e0664426f8b4769119fed9a811378)
+        ;
+
+        
+    
+    
+            var circle_marker_1ccf13fed8ab72e84e5b7d485f4a6287 = L.circleMarker(
+                [43.414324, 77.031478],
+                {"bubblingMouseEvents": true, "color": "#ff4592", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ff4592", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_8681b8f607ade053fdba630f39c5c171);
+        
+    
+        var popup_bf02b4786d88998806015f6b78597500 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_324deb7caa34285c43c0b7090f23fd34 = $(`<div id="html_324deb7caa34285c43c0b7090f23fd34" style="width: 100.0%; height: 100.0%;">Лицей №24 Отеген Батыра<br>Кластер: северный кластер<br>Avg PM2.5: 47.26 µg/m³</div>`)[0];
+                popup_bf02b4786d88998806015f6b78597500.setContent(html_324deb7caa34285c43c0b7090f23fd34);
+            
+        
+
+        circle_marker_1ccf13fed8ab72e84e5b7d485f4a6287.bindPopup(popup_bf02b4786d88998806015f6b78597500)
+        ;
+
+        
+    
+    
+            var circle_marker_c657a23a9950b57ba933815c78e2be78 = L.circleMarker(
+                [43.304666, 76.920135],
+                {"bubblingMouseEvents": true, "color": "#ff4592", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ff4592", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_8681b8f607ade053fdba630f39c5c171);
+        
+    
+        var popup_be4fcff50d059cb1b75f289f1c6ddedd = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_38eac2a48ed926d409baf31cd5d1ffd5 = $(`<div id="html_38eac2a48ed926d409baf31cd5d1ffd5" style="width: 100.0%; height: 100.0%;">Алматинский автомеханический колледж<br>Кластер: северный кластер<br>Avg PM2.5: 35.46 µg/m³</div>`)[0];
+                popup_be4fcff50d059cb1b75f289f1c6ddedd.setContent(html_38eac2a48ed926d409baf31cd5d1ffd5);
+            
+        
+
+        circle_marker_c657a23a9950b57ba933815c78e2be78.bindPopup(popup_be4fcff50d059cb1b75f289f1c6ddedd)
+        ;
+
+        
+    
+    
+            var circle_marker_83011d10219bdd4e0628305fc4c97f74 = L.circleMarker(
+                [43.197951, 76.790527],
+                {"bubblingMouseEvents": true, "color": "#434dfa", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#434dfa", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_8681b8f607ade053fdba630f39c5c171);
+        
+    
+        var popup_9e3068a708743f247603511be813deac = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_b06f5cf65e36b608f9de647c363ac9c4 = $(`<div id="html_b06f5cf65e36b608f9de647c363ac9c4" style="width: 100.0%; height: 100.0%;">200 Школа Гимназия<br>Кластер: южный кластер<br>Avg PM2.5: 28.52 µg/m³</div>`)[0];
+                popup_9e3068a708743f247603511be813deac.setContent(html_b06f5cf65e36b608f9de647c363ac9c4);
+            
+        
+
+        circle_marker_83011d10219bdd4e0628305fc4c97f74.bindPopup(popup_9e3068a708743f247603511be813deac)
+        ;
+
+        
+    
+    
+            var circle_marker_1c1b5e4a2d0b23665606849cd517ab82 = L.circleMarker(
+                [43.334989, 76.960453],
+                {"bubblingMouseEvents": true, "color": "#ff4592", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ff4592", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_8681b8f607ade053fdba630f39c5c171);
+        
+    
+        var popup_38e06a7c743d30ee16bee183bb454f5c = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_1d419a55f5701adfbf00c24d5a3e5447 = $(`<div id="html_1d419a55f5701adfbf00c24d5a3e5447" style="width: 100.0%; height: 100.0%;">Алматинский колледж телекоммуникаций и машиностроения<br>Кластер: северный кластер<br>Avg PM2.5: 32.53 µg/m³</div>`)[0];
+                popup_38e06a7c743d30ee16bee183bb454f5c.setContent(html_1d419a55f5701adfbf00c24d5a3e5447);
+            
+        
+
+        circle_marker_1c1b5e4a2d0b23665606849cd517ab82.bindPopup(popup_38e06a7c743d30ee16bee183bb454f5c)
+        ;
+
+        
+    
+    
+            var circle_marker_40e4ff14510c2d2875cef3a392d5f28e = L.circleMarker(
+                [43.274644, 76.980792],
+                {"bubblingMouseEvents": true, "color": "#434dfa", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#434dfa", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_8681b8f607ade053fdba630f39c5c171);
+        
+    
+        var popup_f7b889fb5ce158dec83bcb0825f4f55f = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_e459e887e654cbf6623b0ebcd2718d40 = $(`<div id="html_e459e887e654cbf6623b0ebcd2718d40" style="width: 100.0%; height: 100.0%;">Переулок Полевой, 23<br>Кластер: южный кластер<br>Avg PM2.5: 26.56 µg/m³</div>`)[0];
+                popup_f7b889fb5ce158dec83bcb0825f4f55f.setContent(html_e459e887e654cbf6623b0ebcd2718d40);
+            
+        
+
+        circle_marker_40e4ff14510c2d2875cef3a392d5f28e.bindPopup(popup_f7b889fb5ce158dec83bcb0825f4f55f)
+        ;
+
+        
+    
+    
+            var circle_marker_28e6654b846b3a4d82a0cad0f076a3ea = L.circleMarker(
+                [43.25358, 76.92828],
+                {"bubblingMouseEvents": true, "color": "#434dfa", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#434dfa", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_8681b8f607ade053fdba630f39c5c171);
+        
+    
+        var popup_ee7916d22a397aa43b8b7b59e8b2a2b7 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_2aaab436debed385bc4132ea978bd8f5 = $(`<div id="html_2aaab436debed385bc4132ea978bd8f5" style="width: 100.0%; height: 100.0%;">Городской кардиологический центр<br>Кластер: южный кластер<br>Avg PM2.5: 25.48 µg/m³</div>`)[0];
+                popup_ee7916d22a397aa43b8b7b59e8b2a2b7.setContent(html_2aaab436debed385bc4132ea978bd8f5);
+            
+        
+
+        circle_marker_28e6654b846b3a4d82a0cad0f076a3ea.bindPopup(popup_ee7916d22a397aa43b8b7b59e8b2a2b7)
+        ;
+
+        
+    
+    
+            var circle_marker_77c5c65b75866e672fc036c05cd8eea3 = L.circleMarker(
+                [43.179283, 76.77013],
+                {"bubblingMouseEvents": true, "color": "#434dfa", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#434dfa", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_8681b8f607ade053fdba630f39c5c171);
+        
+    
+        var popup_04303b53d43c42b36d163e78ae500ea4 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_904a64422b66636ffea366667c41639d = $(`<div id="html_904a64422b66636ffea366667c41639d" style="width: 100.0%; height: 100.0%;">Средняя школа села Кыргауылды<br>Кластер: южный кластер<br>Avg PM2.5: 23.69 µg/m³</div>`)[0];
+                popup_04303b53d43c42b36d163e78ae500ea4.setContent(html_904a64422b66636ffea366667c41639d);
+            
+        
+
+        circle_marker_77c5c65b75866e672fc036c05cd8eea3.bindPopup(popup_04303b53d43c42b36d163e78ae500ea4)
+        ;
+
+        
+    
+    
+            var circle_marker_03ed0c3cb7348c5838c76513a6fa8ddc = L.circleMarker(
+                [43.314281, 76.965627],
+                {"bubblingMouseEvents": true, "color": "#ff4592", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ff4592", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_8681b8f607ade053fdba630f39c5c171);
+        
+    
+        var popup_14c443adec213147c3bae71a1a1110fa = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_a9413cb11766facdabe3b3f8952bbf47 = $(`<div id="html_a9413cb11766facdabe3b3f8952bbf47" style="width: 100.0%; height: 100.0%;">Школа №17<br>Кластер: северный кластер<br>Avg PM2.5: 41.79 µg/m³</div>`)[0];
+                popup_14c443adec213147c3bae71a1a1110fa.setContent(html_a9413cb11766facdabe3b3f8952bbf47);
+            
+        
+
+        circle_marker_03ed0c3cb7348c5838c76513a6fa8ddc.bindPopup(popup_14c443adec213147c3bae71a1a1110fa)
+        ;
+
+        
+    
+    
+            var circle_marker_595e28c38bfa70dcf0f8c634e28b2fd6 = L.circleMarker(
+                [43.325072, 76.986613],
+                {"bubblingMouseEvents": true, "color": "#ff4592", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ff4592", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_8681b8f607ade053fdba630f39c5c171);
+        
+    
+        var popup_1493c9192fcc21aa494846c0918799d6 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_c2ba8b851f22d2ce9898d99e803625d1 = $(`<div id="html_c2ba8b851f22d2ce9898d99e803625d1" style="width: 100.0%; height: 100.0%;">мкр Жас Канат 1/87<br>Кластер: северный кластер<br>Avg PM2.5: 37.33 µg/m³</div>`)[0];
+                popup_1493c9192fcc21aa494846c0918799d6.setContent(html_c2ba8b851f22d2ce9898d99e803625d1);
+            
+        
+
+        circle_marker_595e28c38bfa70dcf0f8c634e28b2fd6.bindPopup(popup_1493c9192fcc21aa494846c0918799d6)
+        ;
+
+        
+    
+    
+            var circle_marker_edbbd68dbf968bb6e6c31b7bd887d43c = L.circleMarker(
+                [43.34389, 77.00721],
+                {"bubblingMouseEvents": true, "color": "#ff4592", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ff4592", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_8681b8f607ade053fdba630f39c5c171);
+        
+    
+        var popup_f55748d0e56877c3005f1f59f50ac666 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_266102e59194dc9c3ae967118438a559 = $(`<div id="html_266102e59194dc9c3ae967118438a559" style="width: 100.0%; height: 100.0%;">Школа-гимназия №44<br>Кластер: северный кластер<br>Avg PM2.5: 39.51 µg/m³</div>`)[0];
+                popup_f55748d0e56877c3005f1f59f50ac666.setContent(html_266102e59194dc9c3ae967118438a559);
+            
+        
+
+        circle_marker_edbbd68dbf968bb6e6c31b7bd887d43c.bindPopup(popup_f55748d0e56877c3005f1f59f50ac666)
+        ;
+
+        
+    
+    
+            var circle_marker_1cb3f8b6a84728cf29bab43aa2166132 = L.circleMarker(
+                [43.2885, 77.004],
+                {"bubblingMouseEvents": true, "color": "#434dfa", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#434dfa", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_8681b8f607ade053fdba630f39c5c171);
+        
+    
+        var popup_17f50f5ed92c166efe69c894ed73ae28 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_c93368590f95f8e140a45886c9ffad93 = $(`<div id="html_c93368590f95f8e140a45886c9ffad93" style="width: 100.0%; height: 100.0%;">​Меркур Град​ Думан-2 микрорайон, 17<br>Кластер: южный кластер<br>Avg PM2.5: 26.37 µg/m³</div>`)[0];
+                popup_17f50f5ed92c166efe69c894ed73ae28.setContent(html_c93368590f95f8e140a45886c9ffad93);
+            
+        
+
+        circle_marker_1cb3f8b6a84728cf29bab43aa2166132.bindPopup(popup_17f50f5ed92c166efe69c894ed73ae28)
+        ;
+
+        
+    
+    
+            var circle_marker_f3b564ddae56b9f38c021fea437ee406 = L.circleMarker(
+                [43.1933, 76.9035],
+                {"bubblingMouseEvents": true, "color": "#434dfa", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#434dfa", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_8681b8f607ade053fdba630f39c5c171);
+        
+    
+        var popup_20cb3c64f2774a5fd8e29ddbfb248783 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_5de0ce5062b1e3aab2ff95d277bcbe12 = $(`<div id="html_5de0ce5062b1e3aab2ff95d277bcbe12" style="width: 100.0%; height: 100.0%;">Улица Кабдена Байдосова, 2а<br>Кластер: южный кластер<br>Avg PM2.5: 24.19 µg/m³</div>`)[0];
+                popup_20cb3c64f2774a5fd8e29ddbfb248783.setContent(html_5de0ce5062b1e3aab2ff95d277bcbe12);
+            
+        
+
+        circle_marker_f3b564ddae56b9f38c021fea437ee406.bindPopup(popup_20cb3c64f2774a5fd8e29ddbfb248783)
+        ;
+
+        
+    
+    
+            var circle_marker_35a2bada4cdc12e4d278e4ff291bbd87 = L.circleMarker(
+                [43.293795, 77.234653],
+                {"bubblingMouseEvents": true, "color": "#434dfa", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#434dfa", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_8681b8f607ade053fdba630f39c5c171);
+        
+    
+        var popup_b84e21dfdbd498067f2096d16eba7b46 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_ead782e926654776f14d6a09ca3e7a76 = $(`<div id="html_ead782e926654776f14d6a09ca3e7a76" style="width: 100.0%; height: 100.0%;">Школа №8 им. Гагарина Талгар<br>Кластер: южный кластер<br>Avg PM2.5: 36.65 µg/m³</div>`)[0];
+                popup_b84e21dfdbd498067f2096d16eba7b46.setContent(html_ead782e926654776f14d6a09ca3e7a76);
+            
+        
+
+        circle_marker_35a2bada4cdc12e4d278e4ff291bbd87.bindPopup(popup_b84e21dfdbd498067f2096d16eba7b46)
+        ;
+
+        
+    
+    
+            var circle_marker_587dcf53c20d45363b3fd3fcb7ed3b46 = L.circleMarker(
+                [43.261717, 76.918127],
+                {"bubblingMouseEvents": true, "color": "#434dfa", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#434dfa", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_8681b8f607ade053fdba630f39c5c171);
+        
+    
+        var popup_7f6a985e6a830ca8d0295038e269df91 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_4aaef963283cf0118cf54e988d746435 = $(`<div id="html_4aaef963283cf0118cf54e988d746435" style="width: 100.0%; height: 100.0%;">Улица Макатаева, 192 · улица Муратбаева, 46 · улица Шагабутдинова, 1<br>Кластер: южный кластер<br>Avg PM2.5: 25.93 µg/m³</div>`)[0];
+                popup_7f6a985e6a830ca8d0295038e269df91.setContent(html_4aaef963283cf0118cf54e988d746435);
+            
+        
+
+        circle_marker_587dcf53c20d45363b3fd3fcb7ed3b46.bindPopup(popup_7f6a985e6a830ca8d0295038e269df91)
+        ;
+
+        
+    
+    
+            var circle_marker_afdc1b82cc17699bb0e2e068fc07f43e = L.circleMarker(
+                [43.220872, 76.836165],
+                {"bubblingMouseEvents": true, "color": "#434dfa", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#434dfa", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_8681b8f607ade053fdba630f39c5c171);
+        
+    
+        var popup_6155a853c737e1d4cbf177b56fa631a1 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_68cd8f4149745074d9ab4f8c77d9fd70 = $(`<div id="html_68cd8f4149745074d9ab4f8c77d9fd70" style="width: 100.0%; height: 100.0%;">Школа-гимназия №153<br>Кластер: южный кластер<br>Avg PM2.5: 26.33 µg/m³</div>`)[0];
+                popup_6155a853c737e1d4cbf177b56fa631a1.setContent(html_68cd8f4149745074d9ab4f8c77d9fd70);
+            
+        
+
+        circle_marker_afdc1b82cc17699bb0e2e068fc07f43e.bindPopup(popup_6155a853c737e1d4cbf177b56fa631a1)
+        ;
+
+        
+    
+    
+            var circle_marker_28bfa1d9ce9ce93b0ca19b3d7c4ca74d = L.circleMarker(
+                [43.2714, 76.9568],
+                {"bubblingMouseEvents": true, "color": "#434dfa", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#434dfa", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_8681b8f607ade053fdba630f39c5c171);
+        
+    
+        var popup_2612044ae0f860742904e90a25bede6b = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_827cf7aa4c6b56361194ecb0332ce73a = $(`<div id="html_827cf7aa4c6b56361194ecb0332ce73a" style="width: 100.0%; height: 100.0%;">Raiymbek - Jangeldin	<br>Кластер: южный кластер<br>Avg PM2.5: 36.53 µg/m³</div>`)[0];
+                popup_2612044ae0f860742904e90a25bede6b.setContent(html_827cf7aa4c6b56361194ecb0332ce73a);
+            
+        
+
+        circle_marker_28bfa1d9ce9ce93b0ca19b3d7c4ca74d.bindPopup(popup_2612044ae0f860742904e90a25bede6b)
+        ;
+
+        
+    
+    
+            var circle_marker_3485d7847b3a19dbd8b185476c8c5bd5 = L.circleMarker(
+                [43.3224, 76.8863],
+                {"bubblingMouseEvents": true, "color": "#ff4592", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ff4592", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_8681b8f607ade053fdba630f39c5c171);
+        
+    
+        var popup_69838e87f3a0dabc124758d552637e49 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_f0f5b10e0702f0e3522d9a35aad825cc = $(`<div id="html_f0f5b10e0702f0e3522d9a35aad825cc" style="width: 100.0%; height: 100.0%;">Школа №156<br>Кластер: северный кластер<br>Avg PM2.5: 59.03 µg/m³</div>`)[0];
+                popup_69838e87f3a0dabc124758d552637e49.setContent(html_f0f5b10e0702f0e3522d9a35aad825cc);
+            
+        
+
+        circle_marker_3485d7847b3a19dbd8b185476c8c5bd5.bindPopup(popup_69838e87f3a0dabc124758d552637e49)
+        ;
+
+        
+    
+    
+            var circle_marker_68463a0f6fe3579941bd41a55ec93d53 = L.circleMarker(
+                [43.303842, 76.83698],
+                {"bubblingMouseEvents": true, "color": "#434dfa", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#434dfa", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_8681b8f607ade053fdba630f39c5c171);
+        
+    
+        var popup_07cd25231f765a09ca5bb3985d04da8f = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_8303e495d393d968f6d27c376cb82e2d = $(`<div id="html_8303e495d393d968f6d27c376cb82e2d" style="width: 100.0%; height: 100.0%;">Саялы 98<br>Кластер: южный кластер<br>Avg PM2.5: 31.93 µg/m³</div>`)[0];
+                popup_07cd25231f765a09ca5bb3985d04da8f.setContent(html_8303e495d393d968f6d27c376cb82e2d);
+            
+        
+
+        circle_marker_68463a0f6fe3579941bd41a55ec93d53.bindPopup(popup_07cd25231f765a09ca5bb3985d04da8f)
+        ;
+
+        
+    
+    
+            var circle_marker_7e9f0fb94990b794d8917a31362a53b4 = L.circleMarker(
+                [43.216815, 76.774339],
+                {"bubblingMouseEvents": true, "color": "#434dfa", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#434dfa", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_8681b8f607ade053fdba630f39c5c171);
+        
+    
+        var popup_dc19b4355edcca717be149452d72ed7f = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_6cce8e0b9511676fd57922bc7b0e9111 = $(`<div id="html_6cce8e0b9511676fd57922bc7b0e9111" style="width: 100.0%; height: 100.0%;">Жилой комплекс Алма City 5<br>Кластер: южный кластер<br>Avg PM2.5: 34.23 µg/m³</div>`)[0];
+                popup_dc19b4355edcca717be149452d72ed7f.setContent(html_6cce8e0b9511676fd57922bc7b0e9111);
+            
+        
+
+        circle_marker_7e9f0fb94990b794d8917a31362a53b4.bindPopup(popup_dc19b4355edcca717be149452d72ed7f)
+        ;
+
+        
+    
+    
+            var circle_marker_4fb78756378d524251a5c2ff0fa9821d = L.circleMarker(
+                [43.260749, 76.885881],
+                {"bubblingMouseEvents": true, "color": "#434dfa", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#434dfa", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_8681b8f607ade053fdba630f39c5c171);
+        
+    
+        var popup_f4bb812406c55bb29af0e1b19a75d0cf = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_4eee345a14ca493e1a171b5b33843835 = $(`<div id="html_4eee345a14ca493e1a171b5b33843835" style="width: 100.0%; height: 100.0%;">Школа №14<br>Кластер: южный кластер<br>Avg PM2.5: 29.92 µg/m³</div>`)[0];
+                popup_f4bb812406c55bb29af0e1b19a75d0cf.setContent(html_4eee345a14ca493e1a171b5b33843835);
+            
+        
+
+        circle_marker_4fb78756378d524251a5c2ff0fa9821d.bindPopup(popup_f4bb812406c55bb29af0e1b19a75d0cf)
+        ;
+
+        
+    
+    
+            var circle_marker_03a84b276ce4de3400ca05fa3c8d53ec = L.circleMarker(
+                [43.221329, 76.784628],
+                {"bubblingMouseEvents": true, "color": "#434dfa", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#434dfa", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_8681b8f607ade053fdba630f39c5c171);
+        
+    
+        var popup_a0a928c6744efbd5bd235d3da0eb72ac = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_f209dca62424a2139c60430484ea94e9 = $(`<div id="html_f209dca62424a2139c60430484ea94e9" style="width: 100.0%; height: 100.0%;">​ЖК Alma city​улица Жунисова, 14<br>Кластер: южный кластер<br>Avg PM2.5: 34.64 µg/m³</div>`)[0];
+                popup_a0a928c6744efbd5bd235d3da0eb72ac.setContent(html_f209dca62424a2139c60430484ea94e9);
+            
+        
+
+        circle_marker_03a84b276ce4de3400ca05fa3c8d53ec.bindPopup(popup_a0a928c6744efbd5bd235d3da0eb72ac)
+        ;
+
+        
+    
+    
+            var circle_marker_07ce83b67683b02ddebd68554468d4fd = L.circleMarker(
+                [43.361193, 76.996598],
+                {"bubblingMouseEvents": true, "color": "#ff4592", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ff4592", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_8681b8f607ade053fdba630f39c5c171);
+        
+    
+        var popup_3c4cd9ef60804bb12784eca35ddfc400 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_709354accb7ae3d6a18bec347ff4a338 = $(`<div id="html_709354accb7ae3d6a18bec347ff4a338" style="width: 100.0%; height: 100.0%;">Школа №142<br>Кластер: северный кластер<br>Avg PM2.5: 42.41 µg/m³</div>`)[0];
+                popup_3c4cd9ef60804bb12784eca35ddfc400.setContent(html_709354accb7ae3d6a18bec347ff4a338);
+            
+        
+
+        circle_marker_07ce83b67683b02ddebd68554468d4fd.bindPopup(popup_3c4cd9ef60804bb12784eca35ddfc400)
+        ;
+
+        
+    
+    
+            var circle_marker_5f71c0eedf3bd344b6f20fb5301ec6f4 = L.circleMarker(
+                [43.240668, 76.882385],
+                {"bubblingMouseEvents": true, "color": "#434dfa", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#434dfa", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_8681b8f607ade053fdba630f39c5c171);
+        
+    
+        var popup_4cc047cdb3643bb882dab8a300946261 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_89a982dda6e8cd5777780346d5668636 = $(`<div id="html_89a982dda6e8cd5777780346d5668636" style="width: 100.0%; height: 100.0%;">Улица Тургут Озала, 203<br>Кластер: южный кластер<br>Avg PM2.5: 31.22 µg/m³</div>`)[0];
+                popup_4cc047cdb3643bb882dab8a300946261.setContent(html_89a982dda6e8cd5777780346d5668636);
+            
+        
+
+        circle_marker_5f71c0eedf3bd344b6f20fb5301ec6f4.bindPopup(popup_4cc047cdb3643bb882dab8a300946261)
+        ;
+
+        
+    
+    
+            var circle_marker_8ca25792bee32eca62e0efc05e57d9d4 = L.circleMarker(
+                [43.24657, 76.868067],
+                {"bubblingMouseEvents": true, "color": "#434dfa", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#434dfa", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_8681b8f607ade053fdba630f39c5c171);
+        
+    
+        var popup_da30c30daaa0355c3236a2ea901400b7 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_cebde3020717d05ceac403c8e945167d = $(`<div id="html_cebde3020717d05ceac403c8e945167d" style="width: 100.0%; height: 100.0%;">Улица Карасай батыра, 326<br>Кластер: южный кластер<br>Avg PM2.5: 28.30 µg/m³</div>`)[0];
+                popup_da30c30daaa0355c3236a2ea901400b7.setContent(html_cebde3020717d05ceac403c8e945167d);
+            
+        
+
+        circle_marker_8ca25792bee32eca62e0efc05e57d9d4.bindPopup(popup_da30c30daaa0355c3236a2ea901400b7)
+        ;
+
+        
+    
+    
+            var circle_marker_4de7647d322371c6e1b1802f2457f80b = L.circleMarker(
+                [43.195178, 76.62088],
+                {"bubblingMouseEvents": true, "color": "#434dfa", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#434dfa", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_8681b8f607ade053fdba630f39c5c171);
+        
+    
+        var popup_054491b1c3e6c563d8696fe8ea8ea534 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_c6fca0eb5531faf7cc8bf7eb13ab8dc4 = $(`<div id="html_c6fca0eb5531faf7cc8bf7eb13ab8dc4" style="width: 100.0%; height: 100.0%;">Школа имени Белинского Каскелен<br>Кластер: южный кластер<br>Avg PM2.5: 30.85 µg/m³</div>`)[0];
+                popup_054491b1c3e6c563d8696fe8ea8ea534.setContent(html_c6fca0eb5531faf7cc8bf7eb13ab8dc4);
+            
+        
+
+        circle_marker_4de7647d322371c6e1b1802f2457f80b.bindPopup(popup_054491b1c3e6c563d8696fe8ea8ea534)
+        ;
+
+        
+    
+    
+            var circle_marker_e56e91d26aa73e3a59cf5fd17930d5f2 = L.circleMarker(
+                [43.1918785, 76.9681236],
+                {"bubblingMouseEvents": true, "color": "#434dfa", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#434dfa", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_8681b8f607ade053fdba630f39c5c171);
+        
+    
+        var popup_39f4ba0640a0de1fffc237528fa40aa9 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_b73e173dac69ad15540e50dd7d5e5c9d = $(`<div id="html_b73e173dac69ad15540e50dd7d5e5c9d" style="width: 100.0%; height: 100.0%;">Школа 47<br>Кластер: южный кластер<br>Avg PM2.5: 23.26 µg/m³</div>`)[0];
+                popup_39f4ba0640a0de1fffc237528fa40aa9.setContent(html_b73e173dac69ad15540e50dd7d5e5c9d);
+            
+        
+
+        circle_marker_e56e91d26aa73e3a59cf5fd17930d5f2.bindPopup(popup_39f4ba0640a0de1fffc237528fa40aa9)
+        ;
+
+        
+    
+    
+            var circle_marker_d9a45439671ad97032701c81cf5e1414 = L.circleMarker(
+                [43.316671, 76.926785],
+                {"bubblingMouseEvents": true, "color": "#ff4592", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ff4592", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_8681b8f607ade053fdba630f39c5c171);
+        
+    
+        var popup_cd1d0c310c28ee41135638ed9fc5298c = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_e35724d7f651c200f24a9661f50a5e52 = $(`<div id="html_e35724d7f651c200f24a9661f50a5e52" style="width: 100.0%; height: 100.0%;">Султанкурган ​Частный детский сад<br>Кластер: северный кластер<br>Avg PM2.5: 40.48 µg/m³</div>`)[0];
+                popup_cd1d0c310c28ee41135638ed9fc5298c.setContent(html_e35724d7f651c200f24a9661f50a5e52);
+            
+        
+
+        circle_marker_d9a45439671ad97032701c81cf5e1414.bindPopup(popup_cd1d0c310c28ee41135638ed9fc5298c)
+        ;
+
+        
+    
+    
+            var circle_marker_32244427aa8486ecbb2fcc12dcc6f1af = L.circleMarker(
+                [43.24103, 76.860789],
+                {"bubblingMouseEvents": true, "color": "#434dfa", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#434dfa", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_8681b8f607ade053fdba630f39c5c171);
+        
+    
+        var popup_c5c83530ded0fbacdc4484c1341f28ce = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_78fc43c1e20fe0cfa3bbf5ec8a50c7bc = $(`<div id="html_78fc43c1e20fe0cfa3bbf5ec8a50c7bc" style="width: 100.0%; height: 100.0%;">Улица Утеген батыра, 84а<br>Кластер: южный кластер<br>Avg PM2.5: 26.38 µg/m³</div>`)[0];
+                popup_c5c83530ded0fbacdc4484c1341f28ce.setContent(html_78fc43c1e20fe0cfa3bbf5ec8a50c7bc);
+            
+        
+
+        circle_marker_32244427aa8486ecbb2fcc12dcc6f1af.bindPopup(popup_c5c83530ded0fbacdc4484c1341f28ce)
+        ;
+
+        
+    
+    
+            var circle_marker_446da817e79b65a189d93727fffc4847 = L.circleMarker(
+                [43.201758, 76.936832],
+                {"bubblingMouseEvents": true, "color": "#434dfa", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#434dfa", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_8681b8f607ade053fdba630f39c5c171);
+        
+    
+        var popup_596e5e82fe68c41b9eedf41a9e6044cf = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_468b64fb0975de1b1f8c33b3e1b2236a = $(`<div id="html_468b64fb0975de1b1f8c33b3e1b2236a" style="width: 100.0%; height: 100.0%;">Санаторий Коктем<br>Кластер: южный кластер<br>Avg PM2.5: 18.61 µg/m³</div>`)[0];
+                popup_596e5e82fe68c41b9eedf41a9e6044cf.setContent(html_468b64fb0975de1b1f8c33b3e1b2236a);
+            
+        
+
+        circle_marker_446da817e79b65a189d93727fffc4847.bindPopup(popup_596e5e82fe68c41b9eedf41a9e6044cf)
+        ;
+
+        
+    
+    
+            var circle_marker_40692055fe5b29892f6ef219c68d3049 = L.circleMarker(
+                [43.486966, 77.06092],
+                {"bubblingMouseEvents": true, "color": "#ff4592", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ff4592", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_8681b8f607ade053fdba630f39c5c171);
+        
+    
+        var popup_2694303a32ee55095e0c5700922a9e8b = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_c0c93239c4eaa2840cb704f71051f2f8 = $(`<div id="html_c0c93239c4eaa2840cb704f71051f2f8" style="width: 100.0%; height: 100.0%;">Школа №40 Малый Байсерке<br>Кластер: северный кластер<br>Avg PM2.5: 56.66 µg/m³</div>`)[0];
+                popup_2694303a32ee55095e0c5700922a9e8b.setContent(html_c0c93239c4eaa2840cb704f71051f2f8);
+            
+        
+
+        circle_marker_40692055fe5b29892f6ef219c68d3049.bindPopup(popup_2694303a32ee55095e0c5700922a9e8b)
+        ;
+
+        
+    
+    
+            var circle_marker_6abaa486a38ede9fb9a0a3f7e364339e = L.circleMarker(
+                [43.249669, 76.94581],
+                {"bubblingMouseEvents": true, "color": "#434dfa", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#434dfa", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_8681b8f607ade053fdba630f39c5c171);
+        
+    
+        var popup_ac2dce25f08555a64a0cef2440eb45a6 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_4a2dfc6c12ac9e6a739de0507d8d2ab2 = $(`<div id="html_4a2dfc6c12ac9e6a739de0507d8d2ab2" style="width: 100.0%; height: 100.0%;">ГАТОБ<br>Кластер: южный кластер<br>Avg PM2.5: 23.97 µg/m³</div>`)[0];
+                popup_ac2dce25f08555a64a0cef2440eb45a6.setContent(html_4a2dfc6c12ac9e6a739de0507d8d2ab2);
+            
+        
+
+        circle_marker_6abaa486a38ede9fb9a0a3f7e364339e.bindPopup(popup_ac2dce25f08555a64a0cef2440eb45a6)
+        ;
+
+        
+    
+    
+            var circle_marker_1197376589409f07f6343b0749476c43 = L.circleMarker(
+                [43.267044, 76.897757],
+                {"bubblingMouseEvents": true, "color": "#434dfa", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#434dfa", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_8681b8f607ade053fdba630f39c5c171);
+        
+    
+        var popup_85df556b218679d17987cb4c1b4da699 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_eb0dc6b6e76ad2d838851158dfebedf7 = $(`<div id="html_eb0dc6b6e76ad2d838851158dfebedf7" style="width: 100.0%; height: 100.0%;">​Улица Казакова, 13а<br>Кластер: южный кластер<br>Avg PM2.5: 32.04 µg/m³</div>`)[0];
+                popup_85df556b218679d17987cb4c1b4da699.setContent(html_eb0dc6b6e76ad2d838851158dfebedf7);
+            
+        
+
+        circle_marker_1197376589409f07f6343b0749476c43.bindPopup(popup_85df556b218679d17987cb4c1b4da699)
+        ;
+
+        
+    
+    
+            var circle_marker_dfb56f2a6a2f1c6c418d55f6850c0858 = L.circleMarker(
+                [43.3575, 76.935],
+                {"bubblingMouseEvents": true, "color": "#ff4592", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ff4592", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_8681b8f607ade053fdba630f39c5c171);
+        
+    
+        var popup_e357d857a0bda8d08664d82b47feb566 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_6e24a00848a6bd8c5effdc3bf6518c21 = $(`<div id="html_6e24a00848a6bd8c5effdc3bf6518c21" style="width: 100.0%; height: 100.0%;">Детский сад №128<br>Кластер: северный кластер<br>Avg PM2.5: 47.66 µg/m³</div>`)[0];
+                popup_e357d857a0bda8d08664d82b47feb566.setContent(html_6e24a00848a6bd8c5effdc3bf6518c21);
+            
+        
+
+        circle_marker_dfb56f2a6a2f1c6c418d55f6850c0858.bindPopup(popup_e357d857a0bda8d08664d82b47feb566)
+        ;
+
+        
+    
+    
+            var circle_marker_2637e64be6ed9b2290600f39e4e50088 = L.circleMarker(
+                [43.204891, 76.899998],
+                {"bubblingMouseEvents": true, "color": "#434dfa", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#434dfa", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_8681b8f607ade053fdba630f39c5c171);
+        
+    
+        var popup_723045e9a155c498cb9c3cec12062b34 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_af45dd0c1ec82d3f18867b39c49f5c5e = $(`<div id="html_af45dd0c1ec82d3f18867b39c49f5c5e" style="width: 100.0%; height: 100.0%;">Проспект Гагарина, 286/1<br>Кластер: южный кластер<br>Avg PM2.5: 21.66 µg/m³</div>`)[0];
+                popup_723045e9a155c498cb9c3cec12062b34.setContent(html_af45dd0c1ec82d3f18867b39c49f5c5e);
+            
+        
+
+        circle_marker_2637e64be6ed9b2290600f39e4e50088.bindPopup(popup_723045e9a155c498cb9c3cec12062b34)
+        ;
+
+        
+    
+    
+            var circle_marker_3d9d88bcdeb5b092faf55d2a9f28421a = L.circleMarker(
+                [43.186883, 76.859971],
+                {"bubblingMouseEvents": true, "color": "#434dfa", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#434dfa", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_8681b8f607ade053fdba630f39c5c171);
+        
+    
+        var popup_7bda48d96962f78d2d31a992823cc016 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_427d43464e9d5eaad639510d66a73a6c = $(`<div id="html_427d43464e9d5eaad639510d66a73a6c" style="width: 100.0%; height: 100.0%;">Улица Нуридин, 23<br>Кластер: южный кластер<br>Avg PM2.5: 23.85 µg/m³</div>`)[0];
+                popup_7bda48d96962f78d2d31a992823cc016.setContent(html_427d43464e9d5eaad639510d66a73a6c);
+            
+        
+
+        circle_marker_3d9d88bcdeb5b092faf55d2a9f28421a.bindPopup(popup_7bda48d96962f78d2d31a992823cc016)
+        ;
+
+        
+    
+    
+            var circle_marker_e2c3d59c0f617bc660ce2acb579654b7 = L.circleMarker(
+                [43.1636, 76.8097],
+                {"bubblingMouseEvents": true, "color": "#434dfa", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#434dfa", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_8681b8f607ade053fdba630f39c5c171);
+        
+    
+        var popup_fefcc96d6669c5754887115d0f3ce5ca = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_d4b75f6d65065a6570b7bc1c7b33a36e = $(`<div id="html_d4b75f6d65065a6570b7bc1c7b33a36e" style="width: 100.0%; height: 100.0%;">СТ Канат, 62<br>Кластер: южный кластер<br>Avg PM2.5: 16.58 µg/m³</div>`)[0];
+                popup_fefcc96d6669c5754887115d0f3ce5ca.setContent(html_d4b75f6d65065a6570b7bc1c7b33a36e);
+            
+        
+
+        circle_marker_e2c3d59c0f617bc660ce2acb579654b7.bindPopup(popup_fefcc96d6669c5754887115d0f3ce5ca)
+        ;
+
+        
+    
+    
+            var circle_marker_1e9a170ddef83c487c802c63cba27862 = L.circleMarker(
+                [43.1934, 76.8186],
+                {"bubblingMouseEvents": true, "color": "#434dfa", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#434dfa", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_8681b8f607ade053fdba630f39c5c171);
+        
+    
+        var popup_685fa60aff1d2e587ded2bdc586472c6 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_3935dcb2878a173eaa76897ea91588af = $(`<div id="html_3935dcb2878a173eaa76897ea91588af" style="width: 100.0%; height: 100.0%;">Управление по делам обороны Наурызбайского района г. Алматы<br>Кластер: южный кластер<br>Avg PM2.5: 23.21 µg/m³</div>`)[0];
+                popup_685fa60aff1d2e587ded2bdc586472c6.setContent(html_3935dcb2878a173eaa76897ea91588af);
+            
+        
+
+        circle_marker_1e9a170ddef83c487c802c63cba27862.bindPopup(popup_685fa60aff1d2e587ded2bdc586472c6)
+        ;
+
+        
+    
+    
+            var circle_marker_0e722d4fb8146a52e9f439e2c759a3fb = L.circleMarker(
+                [43.21412, 76.870697],
+                {"bubblingMouseEvents": true, "color": "#434dfa", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#434dfa", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_8681b8f607ade053fdba630f39c5c171);
+        
+    
+        var popup_d538bf3df06238c961c750e5de4b32ef = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_4a4913bb581879edb849ef722e491078 = $(`<div id="html_4a4913bb581879edb849ef722e491078" style="width: 100.0%; height: 100.0%;">Джандосова 55<br>Кластер: южный кластер<br>Avg PM2.5: 21.87 µg/m³</div>`)[0];
+                popup_d538bf3df06238c961c750e5de4b32ef.setContent(html_4a4913bb581879edb849ef722e491078);
+            
+        
+
+        circle_marker_0e722d4fb8146a52e9f439e2c759a3fb.bindPopup(popup_d538bf3df06238c961c750e5de4b32ef)
+        ;
+
+        
+    
+    
+            var circle_marker_289aabea9bc7506c849ddb0b93d4deef = L.circleMarker(
+                [43.25091, 76.846718],
+                {"bubblingMouseEvents": true, "color": "#ff4592", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ff4592", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_8681b8f607ade053fdba630f39c5c171);
+        
+    
+        var popup_6b5a8c202daa4f991906f7b362911f24 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_1d8463b762e72f97f50a856e6d98c5ee = $(`<div id="html_1d8463b762e72f97f50a856e6d98c5ee" style="width: 100.0%; height: 100.0%;">Школа №82<br>Кластер: северный кластер<br>Avg PM2.5: 43.20 µg/m³</div>`)[0];
+                popup_6b5a8c202daa4f991906f7b362911f24.setContent(html_1d8463b762e72f97f50a856e6d98c5ee);
+            
+        
+
+        circle_marker_289aabea9bc7506c849ddb0b93d4deef.bindPopup(popup_6b5a8c202daa4f991906f7b362911f24)
+        ;
+
+        
+    
+    
+            var circle_marker_a85e1478c17625605992d06cb0046b3e = L.circleMarker(
+                [43.15729, 76.901698],
+                {"bubblingMouseEvents": true, "color": "#434dfa", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#434dfa", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_8681b8f607ade053fdba630f39c5c171);
+        
+    
+        var popup_4ec754d87f3eabff22cf62eb97045fb0 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_7694504888704cab27172c9e96e5ccc9 = $(`<div id="html_7694504888704cab27172c9e96e5ccc9" style="width: 100.0%; height: 100.0%;">Школа 190<br>Кластер: южный кластер<br>Avg PM2.5: 17.03 µg/m³</div>`)[0];
+                popup_4ec754d87f3eabff22cf62eb97045fb0.setContent(html_7694504888704cab27172c9e96e5ccc9);
+            
+        
+
+        circle_marker_a85e1478c17625605992d06cb0046b3e.bindPopup(popup_4ec754d87f3eabff22cf62eb97045fb0)
+        ;
+
+        
+    
+    
+            var circle_marker_bb3d0779be7207659623cc7044a0f953 = L.circleMarker(
+                [43.194391, 76.887585],
+                {"bubblingMouseEvents": true, "color": "#434dfa", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#434dfa", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_8681b8f607ade053fdba630f39c5c171);
+        
+    
+        var popup_8736fb6c9221543f5b4c684c0560da7b = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_0c048627f2c212edbb130ec1819b0a60 = $(`<div id="html_0c048627f2c212edbb130ec1819b0a60" style="width: 100.0%; height: 100.0%;">Парк Первого Президента Республики Казахстан ·<br>Кластер: южный кластер<br>Avg PM2.5: 18.43 µg/m³</div>`)[0];
+                popup_8736fb6c9221543f5b4c684c0560da7b.setContent(html_0c048627f2c212edbb130ec1819b0a60);
+            
+        
+
+        circle_marker_bb3d0779be7207659623cc7044a0f953.bindPopup(popup_8736fb6c9221543f5b4c684c0560da7b)
+        ;
+
+        
+    
+    
+            var circle_marker_875b0bab6fbd6b47c5abb97cd21e91e4 = L.circleMarker(
+                [43.201826, 76.87658],
+                {"bubblingMouseEvents": true, "color": "#434dfa", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#434dfa", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_8681b8f607ade053fdba630f39c5c171);
+        
+    
+        var popup_1158c73e4c17bfb576bc132134f19810 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_c4ffdbc2cec88c3c8012b7cd1751fac1 = $(`<div id="html_c4ffdbc2cec88c3c8012b7cd1751fac1" style="width: 100.0%; height: 100.0%;">Городская поликлиника №4<br>Кластер: южный кластер<br>Avg PM2.5: 19.88 µg/m³</div>`)[0];
+                popup_1158c73e4c17bfb576bc132134f19810.setContent(html_c4ffdbc2cec88c3c8012b7cd1751fac1);
+            
+        
+
+        circle_marker_875b0bab6fbd6b47c5abb97cd21e91e4.bindPopup(popup_1158c73e4c17bfb576bc132134f19810)
+        ;
+
+        
+    
+    
+            var circle_marker_e45fbb5e80041f1930c1d101873b5f42 = L.circleMarker(
+                [43.211378, 76.843408],
+                {"bubblingMouseEvents": true, "color": "#434dfa", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#434dfa", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_8681b8f607ade053fdba630f39c5c171);
+        
+    
+        var popup_39da732643b79d9e06fa6fe888ef8714 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_cc7fee3a80eb6d7b85fade425915b8f0 = $(`<div id="html_cc7fee3a80eb6d7b85fade425915b8f0" style="width: 100.0%; height: 100.0%;">Микрорайон Мамыр 1, 7<br>Кластер: южный кластер<br>Avg PM2.5: 23.72 µg/m³</div>`)[0];
+                popup_39da732643b79d9e06fa6fe888ef8714.setContent(html_cc7fee3a80eb6d7b85fade425915b8f0);
+            
+        
+
+        circle_marker_e45fbb5e80041f1930c1d101873b5f42.bindPopup(popup_39da732643b79d9e06fa6fe888ef8714)
+        ;
+
+        
+    
+    
+            var circle_marker_738b425c6cf5e78ae6ad2a655c0b559a = L.circleMarker(
+                [43.345594, 76.907689],
+                {"bubblingMouseEvents": true, "color": "#ff4592", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ff4592", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_8681b8f607ade053fdba630f39c5c171);
+        
+    
+        var popup_9a93ccc122d65d0abcf5faa11043c918 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_8685850cea0f385121b378c55d8ad562 = $(`<div id="html_8685850cea0f385121b378c55d8ad562" style="width: 100.0%; height: 100.0%;">Улица Куршим, 17<br>Кластер: северный кластер<br>Avg PM2.5: 54.72 µg/m³</div>`)[0];
+                popup_9a93ccc122d65d0abcf5faa11043c918.setContent(html_8685850cea0f385121b378c55d8ad562);
+            
+        
+
+        circle_marker_738b425c6cf5e78ae6ad2a655c0b559a.bindPopup(popup_9a93ccc122d65d0abcf5faa11043c918)
+        ;
+
+        
+    
+    
+            var circle_marker_9f871ee1f542c60a0784f8b3729b22a8 = L.circleMarker(
+                [43.3453819, 76.9588092],
+                {"bubblingMouseEvents": true, "color": "#ff4592", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ff4592", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_8681b8f607ade053fdba630f39c5c171);
+        
+    
+        var popup_26f953db36fcffcf9c2ce1ced9b9ad3b = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_8e84cefe4df886b9125554785bcaef73 = $(`<div id="html_8e84cefe4df886b9125554785bcaef73" style="width: 100.0%; height: 100.0%;">Средняя школа №11<br>Кластер: северный кластер<br>Avg PM2.5: 51.74 µg/m³</div>`)[0];
+                popup_26f953db36fcffcf9c2ce1ced9b9ad3b.setContent(html_8e84cefe4df886b9125554785bcaef73);
+            
+        
+
+        circle_marker_9f871ee1f542c60a0784f8b3729b22a8.bindPopup(popup_26f953db36fcffcf9c2ce1ced9b9ad3b)
+        ;
+
+        
+    
+    
+            var circle_marker_d865dacf128b0aac1090e4e85c2a860a = L.circleMarker(
+                [43.270605, 76.861193],
+                {"bubblingMouseEvents": true, "color": "#ff4592", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ff4592", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_8681b8f607ade053fdba630f39c5c171);
+        
+    
+        var popup_befd30631963f8b5dc90e1fac56a18a8 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_fdeaa8498464a31a7494d4260f48c6be = $(`<div id="html_fdeaa8498464a31a7494d4260f48c6be" style="width: 100.0%; height: 100.0%;">Улица Кокорай, 46<br>Кластер: северный кластер<br>Avg PM2.5: 44.75 µg/m³</div>`)[0];
+                popup_befd30631963f8b5dc90e1fac56a18a8.setContent(html_fdeaa8498464a31a7494d4260f48c6be);
+            
+        
+
+        circle_marker_d865dacf128b0aac1090e4e85c2a860a.bindPopup(popup_befd30631963f8b5dc90e1fac56a18a8)
+        ;
+
+        
+    
+    
+            var circle_marker_ec9ca336348b5d6223b217d9d68cba5b = L.circleMarker(
+                [43.246538, 76.791751],
+                {"bubblingMouseEvents": true, "color": "#ff4592", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ff4592", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_8681b8f607ade053fdba630f39c5c171);
+        
+    
+        var popup_ef9cbd907499a00a2747afbbc64d14e5 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_d5e57c8d0ff012f61534de0386803ed4 = $(`<div id="html_d5e57c8d0ff012f61534de0386803ed4" style="width: 100.0%; height: 100.0%;">Школа 184<br>Кластер: северный кластер<br>Avg PM2.5: 37.97 µg/m³</div>`)[0];
+                popup_ef9cbd907499a00a2747afbbc64d14e5.setContent(html_d5e57c8d0ff012f61534de0386803ed4);
+            
+        
+
+        circle_marker_ec9ca336348b5d6223b217d9d68cba5b.bindPopup(popup_ef9cbd907499a00a2747afbbc64d14e5)
+        ;
+
+        
+    
+    
+            var circle_marker_1f452bbfb6942b710dcc358e85222be0 = L.circleMarker(
+                [43.317893, 76.977536],
+                {"bubblingMouseEvents": true, "color": "#ff4592", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ff4592", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_8681b8f607ade053fdba630f39c5c171);
+        
+    
+        var popup_4e8c328d5ce731c7226ceca2f361dbea = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_ae6ad3cbf3ed2d07b301612f13460ac9 = $(`<div id="html_ae6ad3cbf3ed2d07b301612f13460ac9" style="width: 100.0%; height: 100.0%;">Школа №198<br>Кластер: северный кластер<br>Avg PM2.5: 34.42 µg/m³</div>`)[0];
+                popup_4e8c328d5ce731c7226ceca2f361dbea.setContent(html_ae6ad3cbf3ed2d07b301612f13460ac9);
+            
+        
+
+        circle_marker_1f452bbfb6942b710dcc358e85222be0.bindPopup(popup_4e8c328d5ce731c7226ceca2f361dbea)
+        ;
+
+        
+    
+    
+            var circle_marker_f250e5f1946bd71ea5d561b6aff84ac1 = L.circleMarker(
+                [43.304927, 76.853426],
+                {"bubblingMouseEvents": true, "color": "#ff4592", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ff4592", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_8681b8f607ade053fdba630f39c5c171);
+        
+    
+        var popup_89b2fdc7619c81b0747dac2226ebe8d1 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_4c71e03eaa42a08bd83eb3ff367f501c = $(`<div id="html_4c71e03eaa42a08bd83eb3ff367f501c" style="width: 100.0%; height: 100.0%;">Городская поликлиника №22<br>Кластер: северный кластер<br>Avg PM2.5: 58.69 µg/m³</div>`)[0];
+                popup_89b2fdc7619c81b0747dac2226ebe8d1.setContent(html_4c71e03eaa42a08bd83eb3ff367f501c);
+            
+        
+
+        circle_marker_f250e5f1946bd71ea5d561b6aff84ac1.bindPopup(popup_89b2fdc7619c81b0747dac2226ebe8d1)
+        ;
+
+        
+    
+</script>
+</html>
